@@ -6,7 +6,7 @@ export const RESUME_DATA: ResumeData = {
     name: "Ali Albattah",
     title: "Director of Technology Operations",
     email: "==QZt5CahRHdhJGbhlGbhBUa", // Encoded email (reversed base64)
-    phone: "+966 55 183 3666",
+    phone: "+966502196619",
     location: "Saudi Arabia",
     objective: "Experienced technology leader specializing in IT operations, fintech solutions, and digital transformation. Passionate about building high-performing teams and delivering innovative technology solutions that drive business success."
   },

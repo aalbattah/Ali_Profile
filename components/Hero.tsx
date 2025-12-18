@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, Download, Eye, EyeOff } from 'lucide-react';
+import { Mail, MessageCircle, MapPin, Download, Eye, EyeOff } from 'lucide-react';
 import { RESUME_DATA } from '../constants';
 import { decodeEmail } from '../utils/emailObfuscation';
 
@@ -79,10 +79,15 @@ const Hero: React.FC = () => {
                     <Mail size={18} />
                     <span>{email}</span>
                   </a>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-white/90 text-slate-800 rounded-lg border-2 border-slate-300 shadow-sm font-medium">
-                    <Phone size={18} />
-                    <span>{phone}</span>
-                  </div>
+                  <a 
+                    href={`https://wa.me/${phone.replace(/[^0-9]/g, '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-slate-800 rounded-lg transition-colors border-2 border-slate-300 shadow-sm font-medium"
+                  >
+                    <MessageCircle size={18} />
+                    <span>WhatsApp: {phone}</span>
+                  </a>
                   <div className="flex items-center gap-2 px-4 py-2 bg-white/90 text-slate-800 rounded-lg border-2 border-slate-300 shadow-sm font-medium">
                     <MapPin size={18} />
                     <span>{location}</span>
