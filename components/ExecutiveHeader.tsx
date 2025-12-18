@@ -11,9 +11,9 @@ const ExecutiveHeader: React.FC = () => {
   const navItems = [
     { path: '/', label: 'Home' },
     { path: '/experience', label: 'Experience' },
-    { path: '/certifications', label: 'Certifications' },
-    { path: '/education', label: 'Education' },
     { path: '/volunteering', label: 'Volunteering' },
+    { path: '/training', label: 'Training' },
+    { path: '/education', label: 'Education' },
     { path: '/contact', label: 'Contact' },
   ];
 

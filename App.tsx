@@ -7,6 +7,7 @@ import Experience from './pages/Experience';
 import Certifications from './pages/Certifications';
 import Education from './pages/Education';
 import Volunteering from './pages/Volunteering';
+import Training from './pages/Training';
 import Contact from './pages/Contact';
 
 const App: React.FC = () => {
@@ -18,9 +19,10 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/experience" element={<Experience />} />
+            <Route path="/volunteering" element={<Volunteering />} />
+            <Route path="/training" element={<Training />} />
             <Route path="/certifications" element={<Certifications />} />
             <Route path="/education" element={<Education />} />
-            <Route path="/volunteering" element={<Volunteering />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <footer className="border-t border-slate-200 dark:border-slate-700 py-8 mt-20">

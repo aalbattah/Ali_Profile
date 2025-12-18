@@ -42,12 +42,12 @@ const Volunteering: React.FC = () => {
               </div>
 
               <ul className="space-y-2">
-                {volunteer.details.slice(0, 3).map((detail, i) => (
+                {volunteer.details.map((detail, i) => (
                   <li
                     key={i}
                     className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed flex items-start gap-2"
                   >
-                    <span className="mt-1.5 w-1 h-1 bg-emerald-500 rounded-full flex-shrink-0" />
+                    <span className="mt-1.5 w-1.5 h-1.5 bg-emerald-500 rounded-full flex-shrink-0" />
                     <span>{detail}</span>
                   </li>
                 ))}
