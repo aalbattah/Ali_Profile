@@ -2,17 +2,18 @@ import React from 'react';
 import { Users, TrendingUp, Award, Briefcase } from 'lucide-react';
 
 const achievements = [
-  { icon: Users, value: '80+', label: 'Team Members Led', color: 'bg-slate-200 text-slate-700', shadow: 'shadow-slate-200' },
-  { icon: Briefcase, value: '15+', label: 'Years Experience', color: 'bg-slate-300 text-slate-800', shadow: 'shadow-slate-300' },
-  { icon: TrendingUp, value: '99.9%', label: 'Service Uptime', color: 'bg-slate-200 text-slate-700', shadow: 'shadow-slate-200' },
-  { icon: Award, value: '14+', label: 'Certifications', color: 'bg-slate-300 text-slate-800', shadow: 'shadow-slate-300' },
+  { icon: Users, value: '80+', label: 'Team Members Led', color: 'bg-blue-100 text-blue-600' },
+  { icon: Briefcase, value: '15+', label: 'Years Experience', color: 'bg-blue-100 text-blue-600' },
+  { icon: TrendingUp, value: '99.9%', label: 'Service Uptime', color: 'bg-blue-100 text-blue-600' },
+  { icon: Award, value: '14+', label: 'Certifications', color: 'bg-blue-100 text-blue-600' },
 ];
 
 const Achievements: React.FC = () => {
   return (
     <div className="w-full">
-      <h2 className="text-2xl font-bold text-slate-900 mb-8">
-        <span className="bg-gradient-to-r from-slate-700 to-slate-600 bg-clip-text text-transparent">Key Achievements</span>
+      <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+        <Award className="text-blue-600" size={28} />
+        Key Achievements
       </h2>
       
       <div className="grid grid-cols-2 gap-4">
@@ -21,7 +22,7 @@ const Achievements: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-xl p-5 text-center border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+                className="bg-white rounded-lg p-5 text-center border border-blue-100 hover:border-blue-300 hover:shadow-lg transition-all h-full flex flex-col justify-center"
               >
                 <div className={`w-12 h-12 ${achievement.color} rounded-lg flex items-center justify-center mx-auto mb-3`}>
                   <Icon size={22} />

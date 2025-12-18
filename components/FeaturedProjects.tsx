@@ -24,7 +24,7 @@ const projects = [
     title: 'Cybersecurity & Compliance',
     description: 'Ensured compliance with financial regulations and implemented robust security standards for sensitive financial data.',
     icon: Shield,
-    color: 'bg-slate-100 text-slate-700'
+    color: 'bg-blue-100 text-blue-600'
   },
 ];
 
@@ -32,8 +32,8 @@ const FeaturedProjects: React.FC = () => {
   return (
     <div className="w-full" id="projects">
       <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-        <Code className="text-slate-600" size={28} />
-        <span className="bg-gradient-to-r from-slate-700 to-slate-600 bg-clip-text text-transparent">Featured Projects & Initiatives</span>
+        <Code className="text-blue-600" size={28} />
+        Featured Projects & Initiatives
       </h2>
 
       <div className="grid gap-4">
@@ -42,7 +42,7 @@ const FeaturedProjects: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-lg p-5 border border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all"
+                className="bg-white rounded-lg p-5 border border-blue-100 hover:border-blue-300 hover:shadow-lg transition-all flex-1"
               >
                 <div className={`w-12 h-12 ${project.color} rounded-lg flex items-center justify-center mb-3`}>
                   <Icon size={22} />
