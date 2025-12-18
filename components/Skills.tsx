@@ -12,14 +12,17 @@ const Skills: React.FC = () => {
             <Zap className="text-blue-600" />
             Core Competencies
           </h2>
-          <div className="flex flex-wrap gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {RESUME_DATA.skills.map((skill, idx) => (
-              <span 
+              <div 
                 key={idx} 
-                className="px-4 py-2 bg-white/80 backdrop-blur-sm text-slate-700 rounded-lg border border-blue-100/50 font-medium hover:bg-blue-50 hover:text-blue-700 hover:border-blue-300 hover:shadow-md transition-all cursor-default"
+                className="group bg-white/80 backdrop-blur-sm rounded-xl p-4 border-2 border-blue-100/50 hover:border-blue-300 hover:shadow-lg transition-all transform hover:scale-[1.02] flex items-center gap-3"
               >
-                {skill}
-              </span>
+                <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0 group-hover:bg-blue-600 transition-colors"></div>
+                <span className="font-medium text-slate-700 group-hover:text-blue-700 transition-colors flex-1">
+                  {skill}
+                </span>
+              </div>
             ))}
           </div>
 
