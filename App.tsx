@@ -23,22 +23,8 @@ const App: React.FC = () => {
     <>
       <Loading />
       <div className="min-h-screen text-slate-800 font-sans selection:bg-blue-100 selection:text-blue-900 relative overflow-hidden">
-      {/* Creative gradient background with subtle animation */}
-      <div className="fixed inset-0 -z-10 bg-gradient-to-br from-indigo-50/30 via-white to-purple-50/20" />
-      <div className="fixed inset-0 -z-10 opacity-40">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.1),transparent_50%)]" />
-        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.1),transparent_50%)]" />
-      </div>
-      
-      <style>{`
-        @keyframes shimmer {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100%); }
-        }
-        .animate-shimmer {
-          animation: shimmer 2s infinite;
-        }
-      `}</style>
+      {/* Mat background */}
+      <div className="fixed inset-0 -z-10 bg-slate-50" />
 
       <ScrollProgress />
       <Header />
@@ -52,24 +38,30 @@ const App: React.FC = () => {
         <div className="max-w-5xl mx-auto">
           <div className="border-t border-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 my-6 opacity-50"></div>
         </div>
-        <Achievements />
+        {/* Achievements and Projects Side by Side */}
+        <section className="py-12 relative" data-animate>
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+              <div className="w-full">
+                <Achievements />
+              </div>
+              <div className="w-full">
+                <FeaturedProjects />
+              </div>
+            </div>
+          </div>
+        </section>
         <div className="max-w-5xl mx-auto">
-          <div className="border-t border-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 my-6 opacity-50"></div>
+          <div className="border-t border-slate-200 my-6"></div>
         </div>
         <div id="experience">
           <Experience />
         </div>
         <div className="max-w-5xl mx-auto">
-          <div className="border-t border-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 my-6 opacity-50"></div>
+          <div className="border-t border-slate-200 my-6"></div>
         </div>
         <div id="skills">
           <Skills />
-        </div>
-        <div className="max-w-5xl mx-auto">
-          <div className="border-t border-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 my-6 opacity-50"></div>
-        </div>
-        <div id="projects">
-          <FeaturedProjects />
         </div>
         <div className="max-w-5xl mx-auto">
           <div className="border-t border-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 my-6 opacity-50"></div>

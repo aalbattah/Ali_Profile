@@ -24,38 +24,36 @@ const projects = [
     title: 'Cybersecurity & Compliance',
     description: 'Ensured compliance with financial regulations and implemented robust security standards for sensitive financial data.',
     icon: Shield,
-    color: 'bg-red-100 text-red-600'
+    color: 'bg-slate-100 text-slate-700'
   },
 ];
 
 const FeaturedProjects: React.FC = () => {
   return (
-    <section id="projects" className="py-12 relative" data-animate>
-      <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-3">
-          <Code className="text-blue-600" size={32} />
-          Featured Projects & Initiatives
-        </h2>
+    <div className="w-full" id="projects">
+      <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+        <Code className="text-slate-600" size={28} />
+        <span className="bg-gradient-to-r from-slate-700 to-slate-600 bg-clip-text text-transparent">Featured Projects & Initiatives</span>
+      </h2>
 
-        <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid gap-4">
           {projects.map((project, idx) => {
             const Icon = project.icon;
             return (
               <div
                 key={idx}
-                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-100/50 hover:shadow-xl hover:border-blue-300 transition-all transform hover:scale-[1.02]"
+                className="bg-white rounded-lg p-5 border border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all"
               >
-                <div className={`w-12 h-12 ${project.color} rounded-lg flex items-center justify-center mb-4`}>
-                  <Icon size={24} />
+                <div className={`w-12 h-12 ${project.color} rounded-lg flex items-center justify-center mb-3`}>
+                  <Icon size={22} />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{project.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{project.description}</p>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">{project.title}</h3>
+                <p className="text-slate-600 leading-relaxed text-sm">{project.description}</p>
               </div>
             );
           })}
         </div>
-      </div>
-    </section>
+    </div>
   );
 };
 

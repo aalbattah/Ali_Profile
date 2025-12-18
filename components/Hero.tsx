@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
               <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-6">
                 <button
                   onClick={() => setShowContact(true)}
-                  className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-lg font-medium transition-all shadow-lg hover:shadow-xl"
+                  className="flex items-center gap-2 px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white rounded-lg font-medium transition-all shadow-md hover:shadow-lg"
                 >
                   <Eye size={18} />
                   <span>Contact Information</span>

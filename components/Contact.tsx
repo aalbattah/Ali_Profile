@@ -165,7 +165,7 @@ const Contact: React.FC = () => {
             )}
 
             {submitStatus === 'error' && (
-              <div className="p-4 bg-red-50 border-2 border-red-200 rounded-lg text-red-700 text-center">
+              <div className="p-4 bg-slate-50 border-2 border-slate-200 rounded-lg text-slate-700 text-center">
                 ✗ Something went wrong. Please try again or use the contact form above.
               </div>
             )}

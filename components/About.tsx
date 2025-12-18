@@ -7,8 +7,8 @@ const About: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center justify-center gap-3">
-            <User className="text-indigo-600" size={28} />
-            <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">About Me</span>
+            <User className="text-slate-600" size={28} />
+            About Me
           </h2>
         </div>
 
