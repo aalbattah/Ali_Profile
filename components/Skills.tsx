@@ -9,8 +9,8 @@ const Skills: React.FC = () => {
         {/* Skills Column */}
         <div>
           <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-            <Zap className="text-blue-600" />
-            Core Competencies
+            <Zap className="text-purple-600" />
+            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Core Competencies</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             {RESUME_DATA.skills.map((skill, idx) => (
@@ -28,8 +28,8 @@ const Skills: React.FC = () => {
 
           <div className="mt-12">
             <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-              <BookOpen className="text-blue-600" />
-              Education
+              <BookOpen className="text-cyan-600" />
+              <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">Education</span>
             </h2>
             <div className="space-y-4">
               {RESUME_DATA.education.map((edu, idx) => (
@@ -81,8 +81,8 @@ const Skills: React.FC = () => {
         {/* Certifications Column */}
         <div>
           <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-            <Award className="text-blue-600" />
-            Certifications
+            <Award className="text-amber-600" />
+            <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">Certifications</span>
           </h2>
           <div className="grid gap-3">
             {RESUME_DATA.certifications.map((cert, idx) => (

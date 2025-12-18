@@ -7,8 +7,8 @@ const Experience: React.FC = () => {
     <section id="experience-section" className="py-12 relative" data-animate>
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-          <Briefcase className="text-blue-600" size={28} />
-          Professional Experience
+          <Briefcase className="text-indigo-600" size={28} />
+          <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Professional Experience</span>
         </h2>
 
         <div className="space-y-8">
@@ -20,17 +20,17 @@ const Experience: React.FC = () => {
               <div className="flex flex-col md:flex-row gap-6 md:gap-10 group">
                 {/* Icon/Timeline Marker */}
                 <div className="hidden md:flex flex-col items-center">
-                  <div className="w-16 h-16 rounded-full bg-white border-2 border-blue-100 flex items-center justify-center shadow-sm z-10 group-hover:border-blue-500 transition-colors">
-                    <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 border-2 border-white flex items-center justify-center shadow-lg z-10 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-3 h-3 bg-white rounded-full"></div>
                   </div>
                 </div>
 
                 {/* Content Card */}
-                <div className="flex-1 bg-white p-6 md:p-8 rounded-lg border border-slate-200 hover:border-slate-300 transition-colors">
+                <div className="flex-1 bg-white p-6 md:p-8 rounded-lg border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition-all duration-300 group">
                   <div className="flex flex-col md:flex-row md:items-start justify-between mb-4 gap-2">
                     <div>
-                      <h3 className="text-lg font-semibold text-slate-900 mb-1">{job.role}</h3>
-                      <h4 className="text-base text-slate-600 font-medium">{job.company}</h4>
+                      <h3 className="text-lg font-semibold text-slate-900 mb-1 group-hover:text-indigo-700 transition-colors">{job.role}</h3>
+                      <h4 className="text-base text-indigo-600 font-medium">{job.company}</h4>
                     </div>
                     <div className="flex flex-col items-start md:items-end text-sm text-slate-500 gap-1.5">
                       <div className="flex items-center gap-1.5">

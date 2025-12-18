@@ -38,37 +38,37 @@ const Header: React.FC = () => {
           <div className="hidden md:flex items-center gap-6">
             <button
               onClick={() => scrollToSection('hero')}
-              className="text-slate-700 hover:text-blue-600 transition-colors font-medium hover:scale-105"
+              className="text-slate-700 hover:text-indigo-600 transition-colors font-medium hover:scale-105 relative group"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-slate-700 hover:text-blue-600 transition-colors font-medium hover:scale-105"
+              className="text-slate-700 hover:text-indigo-600 transition-colors font-medium hover:scale-105 relative group"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('experience')}
-              className="text-slate-700 hover:text-blue-600 transition-colors font-medium hover:scale-105"
+              className="text-slate-700 hover:text-indigo-600 transition-colors font-medium hover:scale-105 relative group"
             >
               Experience
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className="text-slate-700 hover:text-blue-600 transition-colors font-medium hover:scale-105"
+              className="text-slate-700 hover:text-indigo-600 transition-colors font-medium hover:scale-105 relative group"
             >
               Projects
             </button>
             <button
               onClick={() => scrollToSection('skills')}
-              className="text-slate-700 hover:text-blue-600 transition-colors font-medium hover:scale-105"
+              className="text-slate-700 hover:text-indigo-600 transition-colors font-medium hover:scale-105 relative group"
             >
               Skills
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-slate-700 hover:text-blue-600 transition-colors font-medium hover:scale-105"
+              className="text-slate-700 hover:text-indigo-600 transition-colors font-medium hover:scale-105 relative group"
             >
               Contact
             </button>
@@ -77,7 +77,7 @@ const Header: React.FC = () => {
           {/* Mobile menu button */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-slate-700 hover:text-blue-600 transition-colors"
+            className="md:hidden text-slate-700 hover:text-indigo-600 transition-colors"
           >
             {isMobileMenuOpen ? (
               <X size={24} />
@@ -95,37 +95,37 @@ const Header: React.FC = () => {
             <div className="flex flex-col gap-3 pt-4">
               <button
                 onClick={() => scrollToSection('hero')}
-                className="text-left text-slate-700 hover:text-blue-600 transition-colors font-medium py-2"
+                className="text-left text-slate-700 hover:text-indigo-600 transition-colors font-medium py-2"
               >
                 Home
               </button>
               <button
                 onClick={() => scrollToSection('about')}
-                className="text-left text-slate-700 hover:text-blue-600 transition-colors font-medium py-2"
+                className="text-left text-slate-700 hover:text-indigo-600 transition-colors font-medium py-2"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection('experience')}
-                className="text-left text-slate-700 hover:text-blue-600 transition-colors font-medium py-2"
+                className="text-left text-slate-700 hover:text-indigo-600 transition-colors font-medium py-2"
               >
                 Experience
               </button>
               <button
                 onClick={() => scrollToSection('projects')}
-                className="text-left text-slate-700 hover:text-blue-600 transition-colors font-medium py-2"
+                className="text-left text-slate-700 hover:text-indigo-600 transition-colors font-medium py-2"
               >
                 Projects
               </button>
               <button
                 onClick={() => scrollToSection('skills')}
-                className="text-left text-slate-700 hover:text-blue-600 transition-colors font-medium py-2"
+                className="text-left text-slate-700 hover:text-indigo-600 transition-colors font-medium py-2"
               >
                 Skills
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="text-left text-slate-700 hover:text-blue-600 transition-colors font-medium py-2"
+                className="text-left text-slate-700 hover:text-indigo-600 transition-colors font-medium py-2"
               >
                 Contact
               </button>

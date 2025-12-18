@@ -15,11 +15,13 @@ const ScrollProgress: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-1 bg-slate-200/50 z-50">
+    <div className="fixed top-0 left-0 w-full h-1.5 bg-gradient-to-r from-slate-100 via-slate-200 to-slate-100 z-50 shadow-sm">
       <div
-        className="h-full bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 transition-all duration-150"
+        className="h-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 transition-all duration-300 ease-out relative overflow-hidden"
         style={{ width: `${scrollProgress}%` }}
-      />
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer" />
+      </div>
     </div>
   );
 };
