@@ -23,8 +23,12 @@ const App: React.FC = () => {
     <>
       <Loading />
       <div className="min-h-screen text-slate-800 font-sans selection:bg-blue-100 selection:text-blue-900 relative overflow-hidden">
-      {/* Mat background */}
-      <div className="fixed inset-0 -z-10 bg-slate-50" />
+      {/* Creative blue background */}
+      <div className="fixed inset-0 -z-10 bg-gradient-to-br from-blue-50/40 via-white to-blue-50/30" />
+      <div className="fixed inset-0 -z-10 opacity-30">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(59,130,246,0.08),transparent_50%)]" />
+        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_70%,rgba(37,99,235,0.08),transparent_50%)]" />
+      </div>
 
       <ScrollProgress />
       <Header />
@@ -35,13 +39,10 @@ const App: React.FC = () => {
         <div id="about">
           <About />
         </div>
-        <div className="max-w-5xl mx-auto">
-          <div className="border-t border-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 my-6 opacity-50"></div>
-        </div>
         {/* Achievements and Projects Side by Side */}
-        <section className="py-12 relative" data-animate>
+        <section className="py-8 relative" data-animate>
           <div className="max-w-6xl mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+            <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
               <div className="w-full">
                 <Achievements />
               </div>
@@ -51,20 +52,11 @@ const App: React.FC = () => {
             </div>
           </div>
         </section>
-        <div className="max-w-5xl mx-auto">
-          <div className="border-t border-slate-200 my-6"></div>
-        </div>
         <div id="experience">
           <Experience />
         </div>
-        <div className="max-w-5xl mx-auto">
-          <div className="border-t border-slate-200 my-6"></div>
-        </div>
         <div id="skills">
           <Skills />
-        </div>
-        <div className="max-w-5xl mx-auto">
-          <div className="border-t border-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 my-6 opacity-50"></div>
         </div>
         <div id="contact">
           <Contact />

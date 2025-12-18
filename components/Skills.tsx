@@ -4,21 +4,21 @@ import { RESUME_DATA } from '../constants';
 
 const Skills: React.FC = () => {
   return (
-    <section id="skills-section" className="py-12 relative" data-animate>
+    <section id="skills-section" className="py-8 relative" data-animate>
       <div className="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-12">
         {/* Skills Column */}
         <div>
           <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-            <Zap className="text-slate-600" />
+            <Zap className="text-blue-600" size={28} />
             Core Competencies
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             {RESUME_DATA.skills.map((skill, idx) => (
               <div 
                 key={idx} 
-                className="bg-white rounded-lg p-3 border border-slate-200 hover:border-slate-300 transition-colors flex items-center gap-2.5"
+                className="bg-white rounded-lg p-3 border border-blue-100 hover:border-blue-300 hover:bg-blue-50/50 transition-all flex items-center gap-2.5"
               >
-                <div className="w-1.5 h-1.5 bg-slate-400 rounded-full flex-shrink-0"></div>
+                <div className="w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0"></div>
                 <span className="text-sm font-medium text-slate-700 flex-1">
                   {skill}
                 </span>
@@ -28,18 +28,18 @@ const Skills: React.FC = () => {
 
           <div className="mt-12">
             <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-              <BookOpen className="text-slate-600" />
+              <BookOpen className="text-blue-600" size={28} />
               Education
             </h2>
             <div className="space-y-4">
               {RESUME_DATA.education.map((edu, idx) => (
                 <div 
                   key={idx} 
-                  className="bg-white rounded-lg p-5 border border-slate-200 hover:border-slate-300 transition-colors"
+                  className="bg-white rounded-lg p-5 border-l-4 border-blue-500 shadow-sm hover:shadow-md hover:border-blue-600 transition-all"
                 >
                   <div className="flex flex-col md:flex-row gap-4 items-start md:items-center">
                     {edu.logo && (
-                      <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 bg-slate-50 rounded-lg p-2.5 flex items-center justify-center border border-slate-200">
+                      <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 bg-blue-50 rounded-lg p-2.5 flex items-center justify-center border border-blue-100">
                         <img 
                           src={`${import.meta.env.BASE_URL}images/${edu.logo}`}
                           alt={`${edu.institution} logo`}
@@ -55,7 +55,7 @@ const Skills: React.FC = () => {
                       <h3 className="font-semibold text-slate-900 text-base mb-1">
                         {edu.degree}
                       </h3>
-                      <div className="text-slate-600 font-medium text-sm mb-2 flex items-center gap-2">
+                      <div className="text-blue-600 font-medium text-sm mb-2 flex items-center gap-2">
                         <span>{edu.institution}</span>
                         <span className="text-slate-300">•</span>
                         <span className="text-slate-500 font-normal text-xs">{edu.location}</span>

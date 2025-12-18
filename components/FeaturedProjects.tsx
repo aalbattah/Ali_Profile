@@ -12,13 +12,13 @@ const projects = [
     title: '24/7 Command Center Operations',
     description: 'Established and managed round-the-clock NOC operations supporting critical fintech infrastructure with 99.9% uptime.',
     icon: Zap,
-    color: 'bg-green-100 text-green-600'
+    color: 'bg-blue-100 text-blue-600'
   },
   {
     title: 'Fintech Platform Development',
     description: 'Led development of secure, scalable fintech platforms with integrated payment solutions and regulatory compliance.',
     icon: Code,
-    color: 'bg-purple-100 text-purple-600'
+    color: 'bg-blue-100 text-blue-600'
   },
   {
     title: 'Cybersecurity & Compliance',
@@ -42,7 +42,7 @@ const FeaturedProjects: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-lg p-5 border border-blue-100 hover:border-blue-300 hover:shadow-lg transition-all flex-1"
+                className="bg-white rounded-lg p-5 border-l-4 border-blue-500 shadow-sm hover:shadow-md hover:border-blue-600 transition-all flex-1"
               >
                 <div className={`w-12 h-12 ${project.color} rounded-lg flex items-center justify-center mb-3`}>
                   <Icon size={22} />

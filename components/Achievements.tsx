@@ -22,7 +22,7 @@ const Achievements: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-lg p-5 text-center border border-blue-100 hover:border-blue-300 hover:shadow-lg transition-all h-full flex flex-col justify-center"
+                className="bg-white rounded-lg p-5 text-center border-l-4 border-blue-500 shadow-sm hover:shadow-md hover:border-blue-600 transition-all h-full flex flex-col justify-center"
               >
                 <div className={`w-12 h-12 ${achievement.color} rounded-lg flex items-center justify-center mx-auto mb-3`}>
                   <Icon size={22} />

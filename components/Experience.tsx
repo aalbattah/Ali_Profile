@@ -4,10 +4,10 @@ import { RESUME_DATA } from '../constants';
 
 const Experience: React.FC = () => {
   return (
-    <section id="experience-section" className="py-12 relative" data-animate>
+    <section id="experience-section" className="py-8 relative" data-animate>
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-          <Briefcase className="text-slate-600" size={28} />
+          <Briefcase className="text-blue-600" size={28} />
           Professional Experience
         </h2>
 
@@ -15,22 +15,22 @@ const Experience: React.FC = () => {
           {RESUME_DATA.experience.map((job, index) => (
             <div key={index} className="relative pl-8 md:pl-0">
               {/* Timeline Line (Desktop) */}
-              <div className="hidden md:block absolute left-[29px] top-8 bottom-[-48px] w-0.5 bg-slate-200 last:bottom-0"></div>
+              <div className="hidden md:block absolute left-[29px] top-8 bottom-[-48px] w-0.5 bg-blue-200 last:bottom-0"></div>
               
               <div className="flex flex-col md:flex-row gap-6 md:gap-10 group">
                 {/* Icon/Timeline Marker */}
                 <div className="hidden md:flex flex-col items-center">
-                  <div className="w-16 h-16 rounded-full bg-slate-600 border-2 border-white flex items-center justify-center shadow-md z-10 group-hover:bg-slate-700 transition-colors">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 border-2 border-white flex items-center justify-center shadow-lg z-10 group-hover:from-blue-600 group-hover:to-blue-700 transition-all group-hover:scale-110">
                     <div className="w-3 h-3 bg-white rounded-full"></div>
                   </div>
                 </div>
 
                 {/* Content Card */}
-                <div className="flex-1 bg-white p-6 md:p-8 rounded-lg border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition-all duration-300 group">
+                <div className="flex-1 bg-white p-6 md:p-8 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md hover:border-blue-600 transition-all group">
                   <div className="flex flex-col md:flex-row md:items-start justify-between mb-4 gap-2">
                     <div>
-                      <h3 className="text-lg font-semibold text-slate-900 mb-1">{job.role}</h3>
-                      <h4 className="text-base text-slate-600 font-medium">{job.company}</h4>
+                      <h3 className="text-lg font-semibold text-slate-900 mb-1 group-hover:text-blue-700 transition-colors">{job.role}</h3>
+                      <h4 className="text-base text-blue-600 font-medium">{job.company}</h4>
                     </div>
                     <div className="flex flex-col items-start md:items-end text-sm text-slate-500 gap-1.5">
                       <div className="flex items-center gap-1.5">
@@ -47,7 +47,7 @@ const Experience: React.FC = () => {
                   <ul className="space-y-2.5">
                     {job.details.map((detail, i) => (
                       <li key={i} className="flex items-start gap-3 text-slate-600 leading-relaxed text-sm">
-                        <span className="mt-1.5 w-1 h-1 bg-slate-400 rounded-full flex-shrink-0" />
+                        <span className="mt-1.5 w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0" />
                         <span>{detail}</span>
                       </li>
                     ))}
@@ -61,7 +61,7 @@ const Experience: React.FC = () => {
         {/* Volunteering Experience Section */}
         {RESUME_DATA.volunteering && RESUME_DATA.volunteering.length > 0 && (
           <>
-            <div className="mt-16 pt-16 border-t border-slate-200">
+            <div className="mt-12 pt-12 border-t border-blue-100">
               <h2 className="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-3">
                 <Heart className="text-slate-600" size={32} />
                 Volunteering Experience
@@ -71,25 +71,25 @@ const Experience: React.FC = () => {
                 {RESUME_DATA.volunteering.map((job, index) => (
                   <div key={index} className="relative pl-8 md:pl-0">
                     {/* Timeline Line (Desktop) */}
-                    <div className="hidden md:block absolute left-[29px] top-8 bottom-[-48px] w-0.5 bg-slate-200 last:bottom-0"></div>
+                    <div className="hidden md:block absolute left-[29px] top-8 bottom-[-48px] w-0.5 bg-blue-200 last:bottom-0"></div>
                     
                     <div className="flex flex-col md:flex-row gap-6 md:gap-10 group">
                       {/* Icon/Timeline Marker */}
                       <div className="hidden md:flex flex-col items-center">
-                        <div className="w-16 h-16 rounded-full bg-white border-2 border-slate-200 flex items-center justify-center shadow-sm z-10 group-hover:border-slate-400 transition-colors">
-                          <div className="w-3 h-3 bg-slate-500 rounded-full"></div>
+                        <div className="w-16 h-16 rounded-full bg-white border-2 border-blue-200 flex items-center justify-center shadow-sm z-10 group-hover:border-blue-400 transition-colors">
+                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
                         </div>
                       </div>
 
                       {/* Content Card */}
-                      <div className="flex-1 bg-white p-6 md:p-8 rounded-lg border border-slate-200 hover:border-slate-300 transition-colors">
+                      <div className="flex-1 bg-white p-6 md:p-8 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md hover:border-blue-600 transition-all">
                         <div className="flex flex-col md:flex-row md:items-start justify-between mb-4 gap-2">
                           <div>
                             <h3 className="text-lg font-semibold text-slate-900 mb-1">{job.role}</h3>
                             <h4 className="text-base text-slate-600 font-medium">{job.company}</h4>
                           </div>
                           <div className="flex flex-col items-start md:items-end text-sm text-slate-500 gap-1">
-                            <div className="flex items-center gap-1.5 bg-slate-50 px-3 py-1 rounded-full">
+                            <div className="flex items-center gap-1.5 bg-blue-50 px-3 py-1 rounded-full">
                               <Calendar size={14} />
                               <span>{job.period}</span>
                             </div>
@@ -103,7 +103,7 @@ const Experience: React.FC = () => {
                         <ul className="space-y-3">
                           {job.details.map((detail, i) => (
                             <li key={i} className="flex items-start gap-3 text-slate-600 leading-relaxed">
-                              <span className="mt-1.5 w-1 h-1 bg-slate-400 rounded-full flex-shrink-0" />
+                              <span className="mt-1.5 w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0" />
                               <span>{detail}</span>
                             </li>
                           ))}

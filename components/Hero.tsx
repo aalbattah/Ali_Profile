@@ -14,8 +14,8 @@ const Hero: React.FC = () => {
   }, [encodedEmail]);
 
   return (
-    <div className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50/30 border-b border-slate-200" id="hero-section" data-animate>
-      <div className="max-w-6xl mx-auto px-4 py-16 sm:py-24">
+    <div className="relative bg-gradient-to-br from-blue-50/40 via-white to-blue-50/30 border-b border-blue-100" id="hero-section" data-animate>
+      <div className="max-w-6xl mx-auto px-4 py-12 sm:py-16">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           {/* Profile Image Placeholder - Assuming a professional avatar style */}
           <div className="relative group">

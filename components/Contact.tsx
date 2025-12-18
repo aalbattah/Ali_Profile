@@ -57,19 +57,19 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-12 relative">
+    <section id="contact" className="py-8 relative">
       <div className="max-w-3xl mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 flex items-center justify-center gap-3">
-            <MessageSquare className="text-blue-600" size={36} />
-            Send Me a Message
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+            <MessageSquare className="text-blue-600" size={28} />
+            Contact Me
           </h2>
-          <p className="text-slate-600 text-lg">
+          <p className="text-slate-600">
             Have a question or want to work together? I'd love to hear from you.
           </p>
         </div>
 
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8 md:p-10">
+        <div className="bg-white rounded-lg border-l-4 border-blue-500 shadow-sm p-6 md:p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
