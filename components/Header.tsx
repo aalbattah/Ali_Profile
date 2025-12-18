@@ -66,6 +66,12 @@ const Header: React.FC = () => {
             >
               Skills
             </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="text-slate-700 hover:text-blue-600 transition-colors font-medium hover:scale-105"
+            >
+              Contact
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -116,6 +122,12 @@ const Header: React.FC = () => {
                 className="text-left text-slate-700 hover:text-blue-600 transition-colors font-medium py-2"
               >
                 Skills
+              </button>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="text-left text-slate-700 hover:text-blue-600 transition-colors font-medium py-2"
+              >
+                Contact
               </button>
             </div>
           </div>

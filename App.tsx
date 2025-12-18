@@ -6,6 +6,7 @@ import Achievements from './components/Achievements';
 import Experience from './components/Experience';
 import FeaturedProjects from './components/FeaturedProjects';
 import Skills from './components/Skills';
+import Contact from './components/Contact';
 import ScrollToTop from './components/ScrollToTop';
 import ScrollProgress from './components/ScrollProgress';
 import Loading from './components/Loading';
@@ -98,6 +99,12 @@ const App: React.FC = () => {
         </div>
         <div id="skills">
           <Skills />
+        </div>
+        <div className="max-w-5xl mx-auto">
+          <div className="border-t border-blue-100/30 my-8"></div>
+        </div>
+        <div id="contact">
+          <Contact />
         </div>
       </main>
       
