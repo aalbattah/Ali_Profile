@@ -35,6 +35,7 @@ export interface ResumeData {
     objective: string;
   };
   experience: Job[];
+  volunteering?: Job[];
   education: Education[];
   certifications: Certification[];
   skills: string[];

@@ -123,6 +123,31 @@ export const RESUME_DATA: ResumeData = {
       ]
     }
   ],
+  volunteering: [
+    {
+      company: "Saudi Tech Team",
+      role: "Information System Security Manager (Volunteer)",
+      location: "Saudi Arabia",
+      period: "Jan 2017 – Jan 2023",
+      details: [
+        "Led information systems security oversight for volunteer-led technology initiatives",
+        "Supported cybersecurity governance, risk awareness, and secure system practices",
+        "Advised on security controls, access management, and best practices for information protection",
+        "Contributed technical expertise to support community and technology-driven programs"
+      ]
+    },
+    {
+      company: "Habitat for Humanity of South Hampton Roads",
+      role: "Volunteer",
+      location: "Norfolk, VA, United States",
+      period: "May 2010 – Aug 2012",
+      details: [
+        "Supported community housing and social impact initiatives",
+        "Assisted in volunteer coordination and on-site activities",
+        "Contributed to projects focused on community development and social responsibility"
+      ]
+    }
+  ],
   education: [
     {
       institution: "Old Dominion University",
