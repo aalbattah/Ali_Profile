@@ -1,13 +1,14 @@
 import { ResumeData } from './types';
+import { decodeEmail } from './utils/emailObfuscation';
 
 export const RESUME_DATA: ResumeData = {
   personalInfo: {
     name: "Ali Albattah",
     title: "Director of Technology Operations",
-    email: "aalbattah88@gmail.com",
+    email: "t92YuwWah12ZAhDOoFGd0FmYsFWY", // Encoded email (reversed base64)
     phone: "+966 55 183 3666",
     location: "Saudi Arabia",
-    objective: "A leadership position where I can develop my computer science skills and ability for challenging and rewarding tasks in the field of Information Technology, enhancing my knowledge in the computer field."
+    objective: "Experienced technology leader specializing in IT operations, fintech solutions, and digital transformation. Passionate about building high-performing teams and delivering innovative technology solutions that drive business success."
   },
   experience: [
     {
@@ -180,12 +181,25 @@ export const RESUME_DATA: ResumeData = {
   ]
 };
 
+// Helper to decode email for context (works in both Node and browser)
+const getEmailForContext = (encoded: string): string => {
+  try {
+    const reversed = encoded.split('').reverse().join('');
+    if (typeof Buffer !== 'undefined') {
+      return Buffer.from(reversed, 'base64').toString();
+    }
+    return atob(reversed);
+  } catch {
+    return encoded; // Fallback to encoded if decoding fails
+  }
+};
+
 export const RESUME_CONTEXT = `
 You are an AI assistant for Ali Albattah. Use the following resume data to answer questions about him professionally.
 
 Name: ${RESUME_DATA.personalInfo.name}
 Title: ${RESUME_DATA.personalInfo.title}
-Contact: ${RESUME_DATA.personalInfo.email}, ${RESUME_DATA.personalInfo.phone}
+Contact: ${getEmailForContext(RESUME_DATA.personalInfo.email)}, ${RESUME_DATA.personalInfo.phone}
 Objective: ${RESUME_DATA.personalInfo.objective}
 
 Experience:

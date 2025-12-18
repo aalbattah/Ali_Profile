@@ -4,7 +4,7 @@ import { RESUME_DATA } from '../constants';
 
 const Skills: React.FC = () => {
   return (
-    <section className="py-16 bg-white">
+    <section id="skills-section" className="py-16 relative" data-animate>
       <div className="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-12">
         {/* Skills Column */}
         <div>
@@ -16,7 +16,7 @@ const Skills: React.FC = () => {
             {RESUME_DATA.skills.map((skill, idx) => (
               <span 
                 key={idx} 
-                className="px-4 py-2 bg-slate-50 text-slate-700 rounded-lg border border-slate-100 font-medium hover:bg-blue-50 hover:text-blue-700 hover:border-blue-200 transition-all cursor-default"
+                className="px-4 py-2 bg-white/80 backdrop-blur-sm text-slate-700 rounded-lg border border-blue-100/50 font-medium hover:bg-blue-50 hover:text-blue-700 hover:border-blue-300 hover:shadow-md transition-all cursor-default"
               >
                 {skill}
               </span>
@@ -51,7 +51,7 @@ const Skills: React.FC = () => {
           </h2>
           <div className="grid gap-4">
             {RESUME_DATA.certifications.map((cert, idx) => (
-              <div key={idx} className="flex items-start gap-4 p-4 rounded-xl border border-slate-100 hover:border-blue-200 hover:bg-blue-50/50 transition-all">
+              <div key={idx} className="flex items-start gap-4 p-4 rounded-xl bg-white/80 backdrop-blur-sm border border-blue-100/50 hover:border-blue-300 hover:bg-blue-50/70 hover:shadow-md transition-all">
                 <div className="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center flex-shrink-0 font-bold text-xs">
                   {cert.year}
                 </div>
@@ -69,7 +69,7 @@ const Skills: React.FC = () => {
             </h2>
              <div className="grid gap-3">
                 {RESUME_DATA.languages.map((lang, idx) => (
-                  <div key={idx} className="flex items-center justify-between p-3 bg-slate-50 rounded-lg">
+                  <div key={idx} className="flex items-center justify-between p-3 bg-white/80 backdrop-blur-sm rounded-lg border border-blue-100/50 hover:shadow-md transition-all">
                     <span className="font-medium text-slate-700">{lang.split('(')[0]}</span>
                     <span className="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">{lang.split('(')[1]?.replace(')', '') || 'Fluent'}</span>
                   </div>

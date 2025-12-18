@@ -4,7 +4,7 @@ import { RESUME_DATA } from '../constants';
 
 const Experience: React.FC = () => {
   return (
-    <section className="py-16 bg-slate-50">
+    <section id="experience-section" className="py-16 relative" data-animate>
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-3">
           <Briefcase className="text-blue-600" size={32} />
@@ -26,7 +26,7 @@ const Experience: React.FC = () => {
                 </div>
 
                 {/* Content Card */}
-                <div className="flex-1 bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                <div className="flex-1 bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-lg border border-blue-100/50 hover:shadow-xl hover:border-blue-200 transition-all transform hover:scale-[1.01]">
                   <div className="flex flex-col md:flex-row md:items-start justify-between mb-4 gap-2">
                     <div>
                       <h3 className="text-xl font-bold text-slate-900">{job.role}</h3>

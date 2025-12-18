@@ -1,17 +1,47 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, Download } from 'lucide-react';
 import { RESUME_DATA } from '../constants';
+import { decodeEmail } from '../utils/emailObfuscation';
 
 const Hero: React.FC = () => {
-  const { name, title, email, phone, location, objective } = RESUME_DATA.personalInfo;
+  const { name, title, email: encodedEmail, phone, location, objective } = RESUME_DATA.personalInfo;
+  const [email, setEmail] = useState<string>('');
+
+  useEffect(() => {
+    // Decode email on client side only
+    setEmail(decodeEmail(encodedEmail));
+  }, [encodedEmail]);
 
   return (
-    <div className="bg-white shadow-sm border-b border-gray-100">
-      <div className="max-w-5xl mx-auto px-4 py-12 sm:py-20">
+    <div className="relative bg-white shadow-sm border-b border-gray-100 overflow-hidden" id="hero-section" data-animate>
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/images/1760790880747.jpeg)',
+          filter: 'blur(2px)',
+          opacity: 0.5
+        }}
+      />
+      {/* Tech Pattern Overlay */}
+      <div 
+        className="absolute inset-0 opacity-30"
+        style={{
+          backgroundImage: `
+            linear-gradient(90deg, transparent 79px, rgba(59, 130, 246, 0.1) 81px, rgba(59, 130, 246, 0.1) 82px, transparent 84px),
+            linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px)
+          `,
+          backgroundSize: '100px 50px'
+        }}
+      />
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/75 via-white/70 to-blue-50/60" />
+      
+      <div className="relative max-w-5xl mx-auto px-4 py-12 sm:py-20 z-10">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           {/* Profile Image Placeholder - Assuming a professional avatar style */}
           <div className="relative group">
-            <div className="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-xl bg-gray-200 ring-2 ring-gray-100">
+            <div className="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-xl bg-gray-200 ring-2 ring-gray-100 transition-all duration-300 group-hover:ring-4 group-hover:ring-blue-300 group-hover:shadow-2xl group-hover:scale-105">
              {/* Using a placeholder resembling the user's attire description if possible, or a generic professional one.
                  Since I cannot use the actual user image file provided in prompt context directly, I will use a high quality placeholder. 
                  Ideally, this src would be replaced by the actual image asset. */}
@@ -24,23 +54,23 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="flex-1 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-2">{name}</h1>
-            <h2 className="text-xl md:text-2xl text-blue-600 font-medium mb-6">{title}</h2>
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-2 drop-shadow-sm" style={{ textShadow: '0 2px 4px rgba(255,255,255,0.8)' }}>{name}</h1>
+            <h2 className="text-xl md:text-2xl text-blue-700 font-semibold mb-6 drop-shadow-sm" style={{ textShadow: '0 1px 2px rgba(255,255,255,0.8)' }}>{title}</h2>
             
-            <p className="text-slate-600 leading-relaxed mb-8 max-w-2xl mx-auto md:mx-0 text-lg">
+            <p className="text-slate-800 leading-relaxed mb-8 max-w-2xl mx-auto md:mx-0 text-lg font-medium drop-shadow-sm" style={{ textShadow: '0 1px 2px rgba(255,255,255,0.8)' }}>
               {objective}
             </p>
 
             <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
-              <a href={`mailto:${email}`} className="flex items-center gap-2 px-4 py-2 bg-slate-50 hover:bg-slate-100 text-slate-700 rounded-lg transition-colors border border-slate-200">
+              <a href={`mailto:${email}`} className="flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-slate-800 rounded-lg transition-colors border-2 border-slate-300 shadow-sm font-medium">
                 <Mail size={18} />
                 <span>{email}</span>
               </a>
-              <div className="flex items-center gap-2 px-4 py-2 bg-slate-50 text-slate-700 rounded-lg border border-slate-200">
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/90 text-slate-800 rounded-lg border-2 border-slate-300 shadow-sm font-medium">
                 <Phone size={18} />
                 <span>{phone}</span>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-slate-50 text-slate-700 rounded-lg border border-slate-200">
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/90 text-slate-800 rounded-lg border-2 border-slate-300 shadow-sm font-medium">
                 <MapPin size={18} />
                 <span>{location}</span>
               </div>
