@@ -177,15 +177,6 @@ export const RESUME_DATA: ResumeData = {
       details: [
         "Relevant Courses: Advanced Computer Application, Computer Components & Assembly, Computer Hardware Maintenance."
       ]
-    },
-    {
-      institution: "ODU Computer Science Dept.",
-      degree: "Senior Project Design (CESR)",
-      location: "Norfolk, VA",
-      period: "2014 – 2015",
-      details: [
-        "Developed a web interface called CESR (Color Enhanced Slash Reader) to aid ESL students."
-      ]
     }
   ],
   certifications: [
