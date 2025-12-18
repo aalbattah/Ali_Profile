@@ -17,6 +17,12 @@ export default defineConfig(({ mode }) => {
       resolve: {
         alias: {
           '@': path.resolve(__dirname, '.'),
+
+            import { defineConfig } from 'vite'
+
+export default defineConfig({
+  base: '/Ali_Profile/',
+})
         }
       }
     };
