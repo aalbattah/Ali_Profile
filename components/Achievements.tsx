@@ -2,7 +2,7 @@ import React from 'react';
 import { Users, TrendingUp, Award, Briefcase } from 'lucide-react';
 
 const achievements = [
-  { icon: Users, value: '60+', label: 'Team Members Led', color: 'bg-blue-100 text-blue-600' },
+  { icon: Users, value: '80+', label: 'Team Members Led', color: 'bg-blue-100 text-blue-600' },
   { icon: Briefcase, value: '15+', label: 'Years Experience', color: 'bg-indigo-100 text-indigo-600' },
   { icon: TrendingUp, value: '99.9%', label: 'Service Uptime', color: 'bg-green-100 text-green-600' },
   { icon: Award, value: '14+', label: 'Certifications', color: 'bg-orange-100 text-orange-600' },
