@@ -14,31 +14,8 @@ const Hero: React.FC = () => {
   }, [encodedEmail]);
 
   return (
-    <div className="relative bg-white shadow-sm border-b border-gray-100 overflow-hidden" id="hero-section" data-animate>
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(${import.meta.env.BASE_URL}images/1760790880747.jpeg)`,
-          filter: 'blur(2px)',
-          opacity: 0.5
-        }}
-      />
-      {/* Tech Pattern Overlay */}
-      <div 
-        className="absolute inset-0 opacity-30"
-        style={{
-          backgroundImage: `
-            linear-gradient(90deg, transparent 79px, rgba(59, 130, 246, 0.1) 81px, rgba(59, 130, 246, 0.1) 82px, transparent 84px),
-            linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px)
-          `,
-          backgroundSize: '100px 50px'
-        }}
-      />
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/75 via-white/70 to-blue-50/60" />
-      
-      <div className="relative max-w-5xl mx-auto px-4 py-12 sm:py-20 z-10">
+    <div className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50/30 border-b border-slate-200" id="hero-section" data-animate>
+      <div className="max-w-6xl mx-auto px-4 py-16 sm:py-24">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           {/* Profile Image Placeholder - Assuming a professional avatar style */}
           <div className="relative group">
@@ -55,65 +32,59 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="flex-1 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-2 drop-shadow-sm" style={{ textShadow: '0 2px 4px rgba(255,255,255,0.8)' }}>{name}</h1>
-            <h2 className="text-xl md:text-2xl text-blue-700 font-semibold mb-6 drop-shadow-sm" style={{ textShadow: '0 1px 2px rgba(255,255,255,0.8)' }}>{title}</h2>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight mb-3">{name}</h1>
+            <h2 className="text-xl md:text-2xl text-slate-600 font-medium mb-6">{title}</h2>
             
-            <p className="text-slate-800 leading-relaxed mb-8 max-w-2xl mx-auto md:mx-0 text-lg font-medium drop-shadow-sm" style={{ textShadow: '0 1px 2px rgba(255,255,255,0.8)' }}>
+            <p className="text-slate-600 leading-relaxed mb-8 max-w-2xl mx-auto md:mx-0 text-base">
               {objective}
             </p>
 
             {!showContact ? (
-              <div className="flex justify-center md:justify-start mb-8">
+              <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-6">
                 <button
                   onClick={() => setShowContact(true)}
-                  className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-all shadow-md hover:shadow-lg active:scale-95"
+                  className="flex items-center gap-2 px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-lg font-medium transition-colors"
                 >
-                  <Eye size={20} />
-                  <span>Show Contact Details</span>
+                  <Eye size={18} />
+                  <span>Contact Information</span>
+                </button>
+                <button 
+                  onClick={() => window.print()}
+                  className="flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-slate-50 text-slate-700 rounded-lg font-medium transition-colors border border-slate-300"
+                >
+                  <Download size={18} />
+                  <span>Download PDF</span>
                 </button>
               </div>
             ) : (
-              <div className="space-y-4 mb-8">
-                <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                  <a href={`mailto:${email}`} className="flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-slate-800 rounded-lg transition-colors border-2 border-slate-300 shadow-sm font-medium">
-                    <Mail size={18} />
+              <div className="space-y-3 mb-6">
+                <div className="flex flex-wrap justify-center md:justify-start gap-3">
+                  <a href={`mailto:${email}`} className="flex items-center gap-2 px-4 py-2 bg-white hover:bg-slate-50 text-slate-700 rounded-lg transition-colors border border-slate-300 text-sm font-medium">
+                    <Mail size={16} />
                     <span>{email}</span>
                   </a>
                   <a 
                     href={`https://wa.me/${phone.replace(/[^0-9]/g, '')}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-slate-800 rounded-lg transition-colors border-2 border-slate-300 shadow-sm font-medium"
+                    className="flex items-center gap-2 px-4 py-2 bg-white hover:bg-slate-50 text-slate-700 rounded-lg transition-colors border border-slate-300 text-sm font-medium"
                   >
-                    <MessageCircle size={18} />
-                    <span>WhatsApp: {phone}</span>
+                    <MessageCircle size={16} />
+                    <span>{phone}</span>
                   </a>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-white/90 text-slate-800 rounded-lg border-2 border-slate-300 shadow-sm font-medium">
-                    <MapPin size={18} />
+                  <div className="flex items-center gap-2 px-4 py-2 bg-white text-slate-700 rounded-lg border border-slate-300 text-sm font-medium">
+                    <MapPin size={16} />
                     <span>{location}</span>
                   </div>
                 </div>
-                <div className="flex justify-center md:justify-start">
-                  <button
-                    onClick={() => setShowContact(false)}
-                    className="flex items-center gap-2 px-4 py-2 text-slate-600 hover:text-slate-800 text-sm transition-colors"
-                  >
-                    <EyeOff size={16} />
-                    <span>Hide Contact Details</span>
-                  </button>
-                </div>
+                <button
+                  onClick={() => setShowContact(false)}
+                  className="text-sm text-slate-500 hover:text-slate-700 transition-colors"
+                >
+                  Hide Contact
+                </button>
               </div>
             )}
-
-            <div className="flex justify-center md:justify-start">
-              <button 
-                onClick={() => window.print()}
-                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-all shadow-md hover:shadow-lg active:scale-95"
-              >
-                <Download size={20} />
-                Save as PDF
-              </button>
-            </div>
           </div>
         </div>
       </div>

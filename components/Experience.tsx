@@ -26,14 +26,14 @@ const Experience: React.FC = () => {
                 </div>
 
                 {/* Content Card */}
-                <div className="flex-1 bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-lg border border-blue-100/50 hover:shadow-xl hover:border-blue-200 transition-all transform hover:scale-[1.01]">
+                <div className="flex-1 bg-white p-6 md:p-8 rounded-lg border border-slate-200 hover:border-slate-300 transition-colors">
                   <div className="flex flex-col md:flex-row md:items-start justify-between mb-4 gap-2">
                     <div>
-                      <h3 className="text-xl font-bold text-slate-900">{job.role}</h3>
-                      <h4 className="text-lg text-blue-600 font-medium">{job.company}</h4>
+                      <h3 className="text-lg font-semibold text-slate-900 mb-1">{job.role}</h3>
+                      <h4 className="text-base text-slate-600 font-medium">{job.company}</h4>
                     </div>
-                    <div className="flex flex-col items-start md:items-end text-sm text-slate-500 gap-1">
-                      <div className="flex items-center gap-1.5 bg-slate-50 px-3 py-1 rounded-full">
+                    <div className="flex flex-col items-start md:items-end text-sm text-slate-500 gap-1.5">
+                      <div className="flex items-center gap-1.5">
                         <Calendar size={14} />
                         <span>{job.period}</span>
                       </div>
@@ -44,10 +44,10 @@ const Experience: React.FC = () => {
                     </div>
                   </div>
 
-                  <ul className="space-y-3">
+                  <ul className="space-y-2.5">
                     {job.details.map((detail, i) => (
-                      <li key={i} className="flex items-start gap-3 text-slate-600 leading-relaxed">
-                        <span className="mt-2 w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0" />
+                      <li key={i} className="flex items-start gap-3 text-slate-600 leading-relaxed text-sm">
+                        <span className="mt-1.5 w-1 h-1 bg-slate-400 rounded-full flex-shrink-0" />
                         <span>{detail}</span>
                       </li>
                     ))}

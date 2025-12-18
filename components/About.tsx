@@ -12,14 +12,14 @@ const About: React.FC = () => {
           </h2>
         </div>
 
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-6 md:p-8">
-          <p className="text-lg text-slate-700 leading-relaxed mb-6 text-center">
+        <div className="bg-white rounded-lg border border-slate-200 p-8 md:p-10">
+          <p className="text-slate-700 leading-relaxed mb-4 text-center max-w-3xl mx-auto">
             I am a seasoned technology leader with over 15 years of experience driving digital transformation 
             and operational excellence in the fintech and banking sectors. My expertise lies in building 
             high-performing teams, implementing robust IT service management frameworks, and delivering 
             scalable technology solutions that align with business objectives.
           </p>
-          <p className="text-lg text-slate-700 leading-relaxed text-center">
+          <p className="text-slate-600 leading-relaxed text-center max-w-3xl mx-auto text-sm">
             Based in Saudi Arabia, I am passionate about leveraging technology to solve complex business 
             challenges and create value through innovation, strategic planning, and continuous improvement.
           </p>

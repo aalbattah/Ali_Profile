@@ -23,51 +23,8 @@ const App: React.FC = () => {
     <>
       <Loading />
       <div className="min-h-screen text-slate-800 font-sans selection:bg-blue-100 selection:text-blue-900 relative overflow-hidden">
-      {/* Tech/Fintech Background Pattern */}
-      <div 
-        className="fixed inset-0 -z-10 opacity-20"
-        style={{
-          background: `
-            linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%),
-            radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 40% 20%, rgba(236, 72, 153, 0.1) 0%, transparent 50%)
-          `,
-          backgroundSize: '400% 400%, 100% 100%, 100% 100%, 100% 100%',
-          animation: 'gradient 15s ease infinite'
-        }}
-      />
-      {/* Digital Grid Pattern */}
-      <div 
-        className="fixed inset-0 -z-10 opacity-10"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: '50px 50px'
-        }}
-      />
-      {/* Circuit-like Pattern */}
-      <div 
-        className="fixed inset-0 -z-10 opacity-5"
-        style={{
-          backgroundImage: `
-            radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.3) 1px, transparent 0)
-          `,
-          backgroundSize: '40px 40px'
-        }}
-      />
-      {/* Base gradient overlay */}
-      <div className="fixed inset-0 -z-10 bg-gradient-to-br from-slate-50/95 via-blue-50/90 to-indigo-50/95" />
-      
-      <style>{`
-        @keyframes gradient {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-      `}</style>
+      {/* Clean professional background */}
+      <div className="fixed inset-0 -z-10 bg-slate-50" />
 
       <ScrollProgress />
       <Header />
