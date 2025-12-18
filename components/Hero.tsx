@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/images/1760790880747.jpeg)',
+          backgroundImage: `url(${import.meta.env.BASE_URL}images/1760790880747.jpeg)`,
           filter: 'blur(2px)',
           opacity: 0.5
         }}
@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
                  Since I cannot use the actual user image file provided in prompt context directly, I will use a high quality placeholder. 
                  Ideally, this src would be replaced by the actual image asset. */}
               <img 
-                src="/images/1.jpg" 
+                src={`${import.meta.env.BASE_URL}images/1.jpg`}
                 alt={name}
                 className="w-full h-full object-cover" 
               />
