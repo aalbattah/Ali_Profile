@@ -4,7 +4,7 @@ import { RESUME_DATA } from '../constants';
 
 const Skills: React.FC = () => {
   return (
-    <section id="skills-section" className="py-16 relative" data-animate>
+    <section id="skills-section" className="py-12 relative" data-animate>
       <div className="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-12">
         {/* Skills Column */}
         <div>

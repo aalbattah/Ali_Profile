@@ -79,29 +79,29 @@ const App: React.FC = () => {
           <About />
         </div>
         <div className="max-w-5xl mx-auto">
-          <div className="border-t border-blue-100/30 my-8"></div>
-        </div>
-        <Achievements />
-        <div className="max-w-5xl mx-auto">
-          <div className="border-t border-blue-100/30 my-8"></div>
+          <div className="border-t border-blue-100/30 my-6"></div>
         </div>
         <div id="experience">
           <Experience />
         </div>
         <div className="max-w-5xl mx-auto">
-          <div className="border-t border-blue-100/30 my-8"></div>
-        </div>
-        <div id="projects">
-          <FeaturedProjects />
-        </div>
-        <div className="max-w-5xl mx-auto">
-          <div className="border-t border-blue-100/30 my-8"></div>
+          <div className="border-t border-blue-100/30 my-6"></div>
         </div>
         <div id="skills">
           <Skills />
         </div>
         <div className="max-w-5xl mx-auto">
-          <div className="border-t border-blue-100/30 my-8"></div>
+          <div className="border-t border-blue-100/30 my-6"></div>
+        </div>
+        <Achievements />
+        <div className="max-w-5xl mx-auto">
+          <div className="border-t border-blue-100/30 my-6"></div>
+        </div>
+        <div id="projects">
+          <FeaturedProjects />
+        </div>
+        <div className="max-w-5xl mx-auto">
+          <div className="border-t border-blue-100/30 my-6"></div>
         </div>
         <div id="contact">
           <Contact />
@@ -152,3 +152,4 @@ const App: React.FC = () => {
 };
 
 export default App;
+

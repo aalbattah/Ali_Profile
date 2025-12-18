@@ -10,25 +10,25 @@ const achievements = [
 
 const Achievements: React.FC = () => {
   return (
-    <section className="py-16 relative" data-animate>
+    <section className="py-12 relative" data-animate>
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+        <h2 className="text-2xl font-bold text-slate-900 mb-8 text-center">
           Key Achievements
         </h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {achievements.map((achievement, idx) => {
             const Icon = achievement.icon;
             return (
               <div
                 key={idx}
-                className="bg-white/80 backdrop-blur-sm rounded-xl p-6 text-center border border-blue-100/50 hover:shadow-xl hover:border-blue-300 transition-all transform hover:scale-105"
+                className="bg-white/80 backdrop-blur-sm rounded-xl p-4 text-center border border-blue-100/50 hover:shadow-lg hover:border-blue-300 transition-all transform hover:scale-105"
               >
-                <div className={`w-16 h-16 ${achievement.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                  <Icon size={28} />
+                <div className={`w-12 h-12 ${achievement.color} rounded-full flex items-center justify-center mx-auto mb-3`}>
+                  <Icon size={22} />
                 </div>
-                <div className="text-3xl font-bold text-slate-900 mb-2">{achievement.value}</div>
-                <div className="text-sm text-slate-600 font-medium">{achievement.label}</div>
+                <div className="text-2xl font-bold text-slate-900 mb-1">{achievement.value}</div>
+                <div className="text-xs text-slate-600 font-medium">{achievement.label}</div>
               </div>
             );
           })}

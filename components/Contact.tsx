@@ -57,10 +57,10 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-16 relative">
+    <section id="contact" className="py-12 relative">
       <div className="max-w-3xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 flex items-center justify-center gap-3">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 flex items-center justify-center gap-3">
             <MessageSquare className="text-blue-600" size={36} />
             Send Me a Message
           </h2>

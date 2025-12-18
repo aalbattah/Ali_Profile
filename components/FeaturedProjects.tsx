@@ -30,7 +30,7 @@ const projects = [
 
 const FeaturedProjects: React.FC = () => {
   return (
-    <section id="projects" className="py-16 relative" data-animate>
+    <section id="projects" className="py-12 relative" data-animate>
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-3">
           <Code className="text-blue-600" size={32} />

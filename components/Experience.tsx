@@ -4,14 +4,14 @@ import { RESUME_DATA } from '../constants';
 
 const Experience: React.FC = () => {
   return (
-    <section id="experience-section" className="py-16 relative" data-animate>
+    <section id="experience-section" className="py-12 relative" data-animate>
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-3">
-          <Briefcase className="text-blue-600" size={32} />
+        <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+          <Briefcase className="text-blue-600" size={28} />
           Professional Experience
         </h2>
 
-        <div className="space-y-12">
+        <div className="space-y-8">
           {RESUME_DATA.experience.map((job, index) => (
             <div key={index} className="relative pl-8 md:pl-0">
               {/* Timeline Line (Desktop) */}
