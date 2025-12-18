@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, Download } from 'lucide-react';
+import { Mail, Phone, MapPin, Download, Eye, EyeOff } from 'lucide-react';
 import { RESUME_DATA } from '../constants';
 import { decodeEmail } from '../utils/emailObfuscation';
 
 const Hero: React.FC = () => {
   const { name, title, email: encodedEmail, phone, location, objective } = RESUME_DATA.personalInfo;
   const [email, setEmail] = useState<string>('');
+  const [showContact, setShowContact] = useState<boolean>(false);
 
   useEffect(() => {
     // Decode email on client side only
@@ -61,20 +62,43 @@ const Hero: React.FC = () => {
               {objective}
             </p>
 
-            <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
-              <a href={`mailto:${email}`} className="flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-slate-800 rounded-lg transition-colors border-2 border-slate-300 shadow-sm font-medium">
-                <Mail size={18} />
-                <span>{email}</span>
-              </a>
-              <div className="flex items-center gap-2 px-4 py-2 bg-white/90 text-slate-800 rounded-lg border-2 border-slate-300 shadow-sm font-medium">
-                <Phone size={18} />
-                <span>{phone}</span>
+            {!showContact ? (
+              <div className="flex justify-center md:justify-start mb-8">
+                <button
+                  onClick={() => setShowContact(true)}
+                  className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-all shadow-md hover:shadow-lg active:scale-95"
+                >
+                  <Eye size={20} />
+                  <span>Show Contact Details</span>
+                </button>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-white/90 text-slate-800 rounded-lg border-2 border-slate-300 shadow-sm font-medium">
-                <MapPin size={18} />
-                <span>{location}</span>
+            ) : (
+              <div className="space-y-4 mb-8">
+                <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                  <a href={`mailto:${email}`} className="flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-slate-800 rounded-lg transition-colors border-2 border-slate-300 shadow-sm font-medium">
+                    <Mail size={18} />
+                    <span>{email}</span>
+                  </a>
+                  <div className="flex items-center gap-2 px-4 py-2 bg-white/90 text-slate-800 rounded-lg border-2 border-slate-300 shadow-sm font-medium">
+                    <Phone size={18} />
+                    <span>{phone}</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-4 py-2 bg-white/90 text-slate-800 rounded-lg border-2 border-slate-300 shadow-sm font-medium">
+                    <MapPin size={18} />
+                    <span>{location}</span>
+                  </div>
+                </div>
+                <div className="flex justify-center md:justify-start">
+                  <button
+                    onClick={() => setShowContact(false)}
+                    className="flex items-center gap-2 px-4 py-2 text-slate-600 hover:text-slate-800 text-sm transition-colors"
+                  >
+                    <EyeOff size={16} />
+                    <span>Hide Contact Details</span>
+                  </button>
+                </div>
               </div>
-            </div>
+            )}
 
             <div className="flex justify-center md:justify-start">
               <button 
