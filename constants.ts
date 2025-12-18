@@ -153,13 +153,109 @@ export const RESUME_DATA: ResumeData = {
     }
   ],
   certifications: [
-    { name: "Project Risk Management (PMI-PRM)", year: "2020" },
-    { name: "HPE Synergy Administration", year: "2019" },
-    { name: "HPE OneView Administration", year: "2019" },
-    { name: "Red Hat Certified System Administrator (RHCSA)", year: "2018", issuer: "License 180-008-013" },
-    { name: "Certified Ethical Hacking (CEH)", year: "2017" },
-    { name: "Project Management (PMP)", year: "2016" },
-    { name: "The 7 Habits of Highly Effective People", year: "2016" }
+    { 
+      name: "Business Information Technology Planning", 
+      year: "2025",
+      issuer: "Global Horizon for Training and Consulting",
+      period: "Oct 2025",
+      location: "Paris, France",
+      skills: ["Business Technology Optimization", "Digital Business Development"]
+    },
+    { 
+      name: "Digital Transformation: From AI and IoT to Cloud, Blockchain and Cybersecurity", 
+      year: "2024",
+      issuer: "MIT Professional Education",
+      period: "Jul 2024",
+      credentialId: "108616941",
+      skills: ["Digital Transformation", "Cloud Computing", "Blockchain", "Cybersecurity"]
+    },
+    { 
+      name: "High-Potential Leadership Development (HIPO Program)", 
+      year: "2024",
+      issuer: "Hult International Business School",
+      period: "Jul 2024",
+      skills: ["Strategic Thinking", "Executive-level Communication", "Emotional Intelligence", "Innovation & Growth Mindset", "Business & Financial Acumen", "Team Empowerment", "Global Leadership Perspective"]
+    },
+    { 
+      name: "EF SET English Certificate – C2 Proficient (72/100)", 
+      year: "2022",
+      issuer: "EF SET",
+      period: "Oct 2022"
+    },
+    { 
+      name: "Project Risk Management (PMI-PRM®) – 40 CPE", 
+      year: "2020",
+      issuer: "Project Champions for Consultation",
+      period: "Aug 2020",
+      skills: ["IT Operations", "Agile Methodologies"]
+    },
+    { 
+      name: "HPE OneView Administration", 
+      year: "2019",
+      issuer: "Hewlett Packard Enterprise",
+      period: "Oct 2019",
+      credentialId: "Successful Completion of 24 CPE",
+      skills: ["IT Operations"]
+    },
+    { 
+      name: "VMware vSphere: Install, Configure, Manage (v6.7)", 
+      year: "2019",
+      issuer: "Hewlett Packard Enterprise",
+      period: "Sep 2019",
+      credentialId: "Successful Completion of 40 CPE",
+      skills: ["IT Operations"]
+    },
+    { 
+      name: "HPE Synergy Administration", 
+      year: "2019",
+      issuer: "Hewlett Packard Enterprise",
+      period: "Apr 2019",
+      credentialId: "Successful Completion of 24 CPE",
+      skills: ["IT Operations"]
+    },
+    { 
+      name: "Veritas InfoScale Availability 7.3 for UNIX/Linux – Administration", 
+      year: "2018",
+      issuer: "Veritas Technologies LLC",
+      period: "May 2018",
+      skills: ["IT Operations"]
+    },
+    { 
+      name: "Veritas InfoScale Storage 7.3 for UNIX/Linux – Administration", 
+      year: "2018",
+      issuer: "Veritas Technologies LLC",
+      period: "Apr 2018",
+      skills: ["IT Operations"]
+    },
+    { 
+      name: "Red Hat Certified System Administrator (RHCSA)", 
+      year: "2018",
+      issuer: "Red Hat",
+      period: "Jan 2018",
+      expired: "Jan 2021",
+      credentialId: "180-008-013",
+      skills: ["IT Operations", "Linux"]
+    },
+    { 
+      name: "Certified Ethical Hacker (CEH)", 
+      year: "2017",
+      issuer: "TechCampus",
+      period: "Jul 2017",
+      credentialId: "Successful Completion of 40 CPE",
+      skills: ["IT Operations", "Linux"]
+    },
+    { 
+      name: "Project Management (PMP®) – 35 CPE NASBA Credits", 
+      year: "2016",
+      issuer: "Technical and Vocational Training Corporation (TVTC)",
+      skills: ["IT Operations", "Agile Methodologies"]
+    },
+    { 
+      name: "The 7 Habits of Highly Effective People", 
+      year: "2016",
+      issuer: "FranklinCovey Middle East",
+      period: "Jan 2016"
+    }
   ],
   skills: [
     "IT Operations Management",

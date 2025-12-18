@@ -55,9 +55,24 @@ const Skills: React.FC = () => {
                 <div className="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center flex-shrink-0 font-bold text-xs">
                   {cert.year}
                 </div>
-                <div>
-                  <h3 className="font-semibold text-slate-800">{cert.name}</h3>
-                  {cert.issuer && <p className="text-sm text-slate-500">{cert.issuer}</p>}
+                <div className="flex-1">
+                  <h3 className="font-semibold text-slate-800 mb-1">{cert.name}</h3>
+                  {cert.issuer && <p className="text-sm text-slate-600 font-medium mb-1">{cert.issuer}</p>}
+                  <div className="flex flex-wrap gap-2 text-xs text-slate-500">
+                    {cert.period && <span>Issued {cert.period}</span>}
+                    {cert.expired && <span className="text-orange-600">• Expired {cert.expired}</span>}
+                    {cert.location && <span>• {cert.location}</span>}
+                    {cert.credentialId && <span>• ID: {cert.credentialId}</span>}
+                  </div>
+                  {cert.skills && cert.skills.length > 0 && (
+                    <div className="flex flex-wrap gap-1 mt-2">
+                      {cert.skills.map((skill, skillIdx) => (
+                        <span key={skillIdx} className="text-xs px-2 py-0.5 bg-blue-50 text-blue-700 rounded-full border border-blue-200">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

@@ -18,6 +18,11 @@ export interface Certification {
   name: string;
   year: string;
   issuer?: string;
+  period?: string;
+  credentialId?: string;
+  skills?: string[];
+  location?: string;
+  expired?: string;
 }
 
 export interface ResumeData {
