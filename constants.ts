@@ -150,13 +150,24 @@ export const RESUME_DATA: ResumeData = {
   ],
   education: [
     {
+      institution: "Al Yamamah University",
+      degree: "Executive Master of Business Administration (EMBA)",
+      location: "Saudi Arabia",
+      period: "Sep 2024 – Oct 2026",
+      details: [
+        "Business Administration and Management, General"
+      ],
+      logo: "alyamamah-logo.png"
+    },
+    {
       institution: "Old Dominion University",
       degree: "Bachelor of Science in Computer Science",
       location: "Norfolk, VA, United States",
       period: "2012 - Aug 2015",
       details: [
         "Relevant Courses: OOP, Computer Networking, Advanced Data Structures and Algorithms, OS, UNIX Administration, Parallel Programming, Software Engineering."
-      ]
+      ],
+      logo: "odu-logo.png"
     },
     {
       institution: "College of Technology",

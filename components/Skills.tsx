@@ -31,12 +31,29 @@ const Skills: React.FC = () => {
             <div className="space-y-6">
               {RESUME_DATA.education.map((edu, idx) => (
                 <div key={idx} className="border-l-2 border-blue-500 pl-4 py-1">
-                  <h3 className="font-bold text-slate-900">{edu.degree}</h3>
-                  <div className="text-slate-600 text-sm mb-1">{edu.institution}</div>
-                  <div className="text-slate-400 text-xs uppercase tracking-wider">{edu.period}</div>
-                  {edu.details && (
-                    <p className="text-slate-500 text-sm mt-2">{edu.details.join(' ')}</p>
-                  )}
+                  <div className="flex items-start gap-3">
+                    {edu.logo && (
+                      <div className="flex-shrink-0 mt-1">
+                        <img 
+                          src={`${import.meta.env.BASE_URL}images/${edu.logo}`}
+                          alt={`${edu.institution} logo`}
+                          className="w-12 h-12 object-contain"
+                          onError={(e) => {
+                            // Hide image if it doesn't exist
+                            (e.target as HTMLImageElement).style.display = 'none';
+                          }}
+                        />
+                      </div>
+                    )}
+                    <div className="flex-1">
+                      <h3 className="font-bold text-slate-900">{edu.degree}</h3>
+                      <div className="text-slate-600 text-sm mb-1">{edu.institution}</div>
+                      <div className="text-slate-400 text-xs uppercase tracking-wider">{edu.period}</div>
+                      {edu.details && (
+                        <p className="text-slate-500 text-sm mt-2">{edu.details.join(' ')}</p>
+                      )}
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>

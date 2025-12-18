@@ -12,6 +12,7 @@ export interface Education {
   period: string;
   details?: string[];
   location: string;
+  logo?: string;
 }
 
 export interface Certification {
