@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
-import PrivacyGate from './components/PrivacyGate';
 import ExecutiveHeader from './components/ExecutiveHeader';
 import Home from './pages/Home';
 import Experience from './pages/Experience';
@@ -11,27 +10,6 @@ import Volunteering from './pages/Volunteering';
 import Contact from './pages/Contact';
 
 const App: React.FC = () => {
-  const [accessGranted, setAccessGranted] = useState(false);
-
-  useEffect(() => {
-    // Check if access was previously granted
-    if (localStorage.getItem('portfolio_access') === 'granted') {
-      setAccessGranted(true);
-    }
-  }, []);
-
-  const handleAccessGranted = () => {
-    setAccessGranted(true);
-  };
-
-  if (!accessGranted) {
-    return (
-      <ThemeProvider>
-        <PrivacyGate onAccessGranted={handleAccessGranted} />
-      </ThemeProvider>
-    );
-  }
-
   return (
     <ThemeProvider>
       <BrowserRouter basename={import.meta.env.BASE_URL}>
