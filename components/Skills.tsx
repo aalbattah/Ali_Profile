@@ -81,34 +81,40 @@ const Skills: React.FC = () => {
         {/* Certifications Column */}
         <div>
           <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-            <Award className="text-slate-600" />
+            <Award className="text-blue-600" size={28} />
             Certifications
           </h2>
-          <div className="grid gap-3">
+          <div className="space-y-3">
             {RESUME_DATA.certifications.map((cert, idx) => (
-              <div key={idx} className="flex items-start gap-3 p-4 rounded-lg bg-white border border-slate-200 hover:border-slate-300 transition-colors">
-                <div className="w-10 h-10 rounded bg-slate-100 text-slate-600 flex items-center justify-center flex-shrink-0 font-semibold text-xs">
-                  {cert.year}
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-medium text-slate-900 mb-1 text-sm">{cert.name}</h3>
-                  {cert.issuer && <p className="text-xs text-slate-600 mb-1.5">{cert.issuer}</p>}
-                  <div className="flex flex-wrap gap-1.5 text-xs text-slate-500 mb-2">
-                    {cert.period && <span>Issued {cert.period}</span>}
-                    {cert.expired && <span className="text-slate-400">• Expired {cert.expired}</span>}
-                    {cert.location && <span>• {cert.location}</span>}
-                    {cert.credentialId && <span>• ID: {cert.credentialId}</span>}
+              <div key={idx} className="bg-white rounded-lg border border-blue-100 hover:border-blue-300 p-4 transition-colors">
+                <div className="flex items-start justify-between gap-3 mb-2">
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-semibold text-slate-900 mb-1 text-sm leading-tight">{cert.name}</h3>
+                    {cert.issuer && (
+                      <p className="text-xs text-blue-600 font-medium mb-1">{cert.issuer}</p>
+                    )}
                   </div>
-                  {cert.skills && cert.skills.length > 0 && (
-                    <div className="flex flex-wrap gap-1">
-                      {cert.skills.map((skill, skillIdx) => (
-                        <span key={skillIdx} className="text-xs px-2 py-0.5 bg-slate-100 text-slate-700 rounded">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  )}
+                  <div className="flex-shrink-0">
+                    <span className="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-1 rounded">
+                      {cert.year}
+                    </span>
+                  </div>
                 </div>
+                <div className="flex flex-wrap gap-1.5 text-xs text-slate-500 mb-2">
+                  {cert.period && <span className="bg-slate-50 px-2 py-0.5 rounded">Issued {cert.period}</span>}
+                  {cert.expired && <span className="bg-slate-50 px-2 py-0.5 rounded text-slate-400">Expired {cert.expired}</span>}
+                  {cert.location && <span className="bg-slate-50 px-2 py-0.5 rounded">{cert.location}</span>}
+                  {cert.credentialId && <span className="bg-slate-50 px-2 py-0.5 rounded">ID: {cert.credentialId}</span>}
+                </div>
+                {cert.skills && cert.skills.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5 mt-2">
+                    {cert.skills.map((skill, skillIdx) => (
+                      <span key={skillIdx} className="text-xs px-2 py-0.5 bg-blue-50 text-blue-700 rounded border border-blue-100">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
