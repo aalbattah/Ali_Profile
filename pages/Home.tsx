@@ -1,9 +1,32 @@
 import React from 'react';
-import { Download, Linkedin } from 'lucide-react';
+import { Download, Linkedin, User, Code, Server, Shield, Zap, Globe } from 'lucide-react';
 import { RESUME_DATA } from '../constants';
 
 const Home: React.FC = () => {
   const { name, objective } = RESUME_DATA.personalInfo;
+
+  const featuredProjects = [
+    {
+      title: 'IT Service Management Framework',
+      description: 'Designed and implemented comprehensive ITSM framework ensuring regulatory compliance and service quality across enterprise operations.',
+      icon: Server,
+    },
+    {
+      title: '24/7 Command Center Operations',
+      description: 'Established and managed round-the-clock NOC operations supporting critical fintech infrastructure with 99.9% uptime.',
+      icon: Zap,
+    },
+    {
+      title: 'Fintech Platform Development',
+      description: 'Led development of secure, scalable fintech platforms with integrated payment solutions and regulatory compliance.',
+      icon: Code,
+    },
+    {
+      title: 'Cybersecurity & Compliance',
+      description: 'Ensured compliance with financial regulations and implemented robust security standards for sensitive financial data.',
+      icon: Shield,
+    },
+  ];
 
   const highlights = [
     { value: '80+', label: 'Users Supported' },
@@ -12,18 +35,8 @@ const Home: React.FC = () => {
     { value: '15+', label: 'Years of Experience' },
   ];
 
-  const expertise = [
-    'IT Operations',
-    'Infrastructure & Cloud',
-    'Service Management (ITIL)',
-    'Governance & Risk',
-    'Vendor Management',
-    'Digital Transformation',
-    'Fintech Solutions',
-    'Strategic Planning',
-    'Team Leadership',
-    'Cybersecurity',
-  ];
+  // Use actual skills from constants
+  const expertise = RESUME_DATA.skills;
 
   return (
     <div className="min-h-screen">
@@ -101,21 +114,116 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Core Expertise */}
+      {/* About Me */}
+      <section className="py-20 bg-slate-50 dark:bg-slate-900/50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-8">
+            <User className="w-8 h-8 text-emerald-600 dark:text-emerald-400" />
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
+              About Me
+            </h2>
+          </div>
+          <div className="bg-white dark:bg-slate-800 rounded-xl p-8 border border-slate-200 dark:border-slate-700">
+            <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+              I am a seasoned technology leader with over 15 years of experience driving digital transformation 
+              and operational excellence in the fintech and banking sectors. My expertise lies in building 
+              high-performing teams, implementing robust IT service management frameworks, and delivering 
+              scalable technology solutions that align with business objectives.
+            </p>
+            <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+              Based in Saudi Arabia, I am passionate about leveraging technology to solve complex business 
+              challenges and create value through innovation, strategic planning, and continuous improvement.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects & Initiatives */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-12">
+            <Code className="w-8 h-8 text-emerald-600 dark:text-emerald-400" />
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
+              Featured Projects & Initiatives
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {featuredProjects.map((project, idx) => {
+              const Icon = project.icon;
+              return (
+                <div
+                  key={idx}
+                  className="bg-white dark:bg-slate-800 rounded-xl p-6 border-l-4 border-emerald-500 shadow-sm hover:shadow-md hover:border-emerald-600 transition-all"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg">
+                      <Icon className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                        {project.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Core Expertise */}
+      <section className="py-20 bg-slate-50 dark:bg-slate-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12">
-            Core Expertise
+            Core Competencies
           </h2>
-          <div className="flex flex-wrap gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
             {expertise.map((skill, idx) => (
-              <span
+              <div
                 key={idx}
-                className="px-6 py-3 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium border border-slate-200 dark:border-slate-700"
+                className="bg-white dark:bg-slate-800 rounded-lg p-4 border border-slate-200 dark:border-slate-700 flex items-center gap-3"
               >
-                {skill}
-              </span>
+                <div className="w-2 h-2 bg-emerald-500 rounded-full flex-shrink-0"></div>
+                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                  {skill}
+                </span>
+              </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Languages */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-8">
+            <Globe className="w-8 h-8 text-emerald-600 dark:text-emerald-400" />
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
+              Languages
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-4">
+            {RESUME_DATA.languages.map((lang, idx) => {
+              const [language, proficiency] = lang.split('(');
+              const level = proficiency?.replace(')', '') || 'Fluent';
+              return (
+                <div
+                  key={idx}
+                  className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 flex items-center justify-between"
+                >
+                  <span className="text-base font-medium text-slate-900 dark:text-white">
+                    {language.trim()}
+                  </span>
+                  <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/30 px-3 py-1 rounded-full">
+                    {level}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
