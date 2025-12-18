@@ -28,16 +28,19 @@ const Skills: React.FC = () => {
               <BookOpen className="text-blue-600" />
               Education
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-4">
               {RESUME_DATA.education.map((edu, idx) => (
-                <div key={idx} className="border-l-2 border-blue-500 pl-4 py-1">
-                  <div className="flex items-start gap-3">
+                <div 
+                  key={idx} 
+                  className="group relative bg-white/80 backdrop-blur-sm rounded-xl p-5 border-2 border-blue-100/50 hover:border-blue-300 hover:shadow-lg transition-all transform hover:scale-[1.02]"
+                >
+                  <div className="flex flex-col md:flex-row gap-4 items-start md:items-center">
                     {edu.logo && (
-                      <div className="flex-shrink-0 mt-1">
+                      <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-3 flex items-center justify-center border border-blue-100 group-hover:border-blue-200 transition-all shadow-sm group-hover:shadow-md">
                         <img 
                           src={`${import.meta.env.BASE_URL}images/${edu.logo}`}
                           alt={`${edu.institution} logo`}
-                          className="w-12 h-12 object-contain"
+                          className="w-full h-full object-contain"
                           onError={(e) => {
                             // Hide image if it doesn't exist
                             (e.target as HTMLImageElement).style.display = 'none';
@@ -45,13 +48,25 @@ const Skills: React.FC = () => {
                         />
                       </div>
                     )}
-                    <div className="flex-1">
-                      <h3 className="font-bold text-slate-900">{edu.degree}</h3>
-                      <div className="text-slate-600 text-sm mb-1">{edu.institution}</div>
-                      <div className="text-slate-400 text-xs uppercase tracking-wider">{edu.period}</div>
-                      {edu.details && (
-                        <p className="text-slate-500 text-sm mt-2">{edu.details.join(' ')}</p>
-                      )}
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-bold text-slate-900 text-lg mb-1 group-hover:text-blue-700 transition-colors">
+                        {edu.degree}
+                      </h3>
+                      <div className="text-blue-600 font-semibold text-sm mb-2 flex items-center gap-2">
+                        <span>{edu.institution}</span>
+                        <span className="text-slate-300">•</span>
+                        <span className="text-slate-500 font-normal text-xs">{edu.location}</span>
+                      </div>
+                      <div className="flex items-center gap-3 flex-wrap">
+                        <span className="text-slate-500 text-xs font-medium bg-slate-100 px-3 py-1 rounded-full">
+                          {edu.period}
+                        </span>
+                        {edu.details && edu.details.length > 0 && (
+                          <span className="text-slate-400 text-xs">
+                            {edu.details[0]}
+                          </span>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
