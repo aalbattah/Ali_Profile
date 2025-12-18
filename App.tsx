@@ -38,6 +38,10 @@ const App: React.FC = () => {
         <div className="max-w-5xl mx-auto">
           <div className="border-t border-blue-100/30 my-6"></div>
         </div>
+        <Achievements />
+        <div className="max-w-5xl mx-auto">
+          <div className="border-t border-blue-100/30 my-6"></div>
+        </div>
         <div id="experience">
           <Experience />
         </div>
@@ -47,10 +51,6 @@ const App: React.FC = () => {
         <div id="skills">
           <Skills />
         </div>
-        <div className="max-w-5xl mx-auto">
-          <div className="border-t border-blue-100/30 my-6"></div>
-        </div>
-        <Achievements />
         <div className="max-w-5xl mx-auto">
           <div className="border-t border-blue-100/30 my-6"></div>
         </div>
