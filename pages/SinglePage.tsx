@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Download, Linkedin, User, Code, Server, Shield, Zap, Globe, Briefcase, Heart, BookOpen, Award, Calendar, MapPin, ChevronDown, ChevronUp, Mail, MessageSquare } from 'lucide-react';
+import { Linkedin, User, Code, Server, Shield, Zap, Globe, Briefcase, Heart, BookOpen, Award, Calendar, MapPin, ChevronDown, ChevronUp, Mail, MessageSquare, Users, UsersRound, GraduationCap, Clock } from 'lucide-react';
 import { RESUME_DATA } from '../constants';
 import { decodeEmail } from '../utils/emailObfuscation';
 
@@ -7,16 +7,17 @@ const SinglePage: React.FC = () => {
   const { name, objective, email: encodedEmail, location } = RESUME_DATA.personalInfo;
   const email = decodeEmail(encodedEmail);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const arabicName = 'علي عبدالله البطاح';
 
   const toggleExpand = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
 
   const highlights = [
-    { value: '80+', label: 'Users Supported' },
-    { value: '50+', label: 'Enterprise Services' },
-    { value: '20+', label: 'Transformation Programs' },
-    { value: '15+', label: 'Years of Experience' },
+    { value: '80+', label: 'Team Members Led', icon: Users },
+    { value: '12M+', label: 'Customers Served', icon: UsersRound },
+    { value: `${RESUME_DATA.certifications.length}+`, label: 'Certifications', icon: GraduationCap },
+    { value: '15+', label: 'Years of Experience', icon: Clock },
   ];
 
   const featuredProjects = [
@@ -109,9 +110,12 @@ const SinglePage: React.FC = () => {
             {/* Left Side */}
             <div className="space-y-8">
               <div>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">
                   {name}
                 </h1>
+                <p className="text-base md:text-lg lg:text-xl arabic-name mb-4">
+                  {arabicName}
+                </p>
                 <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-light">
                   Technology Operations & Infrastructure Leader
                 </p>
@@ -122,10 +126,6 @@ const SinglePage: React.FC = () => {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <button className="px-6 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-lg font-medium hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors flex items-center gap-2">
-                  <Download size={18} />
-                  Download CV
-                </button>
                 <a
                   href="https://linkedin.com/in/alialbattah"
                   target="_blank"
@@ -133,7 +133,7 @@ const SinglePage: React.FC = () => {
                   className="px-6 py-3 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white rounded-lg font-medium hover:border-slate-900 dark:hover:border-slate-400 transition-colors flex items-center gap-2"
                 >
                   <Linkedin size={18} />
-                  LinkedIn Profile
+                  LinkedIn
                 </a>
               </div>
             </div>
@@ -156,22 +156,38 @@ const SinglePage: React.FC = () => {
       </section>
 
       {/* Key Highlights */}
-      <section id="highlights" className="py-16 bg-slate-50 dark:bg-slate-900/50">
+      <section id="highlights" className="py-16 bg-slate-50 dark:bg-slate-900/50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {highlights.map((highlight, idx) => (
-              <div
-                key={idx}
-                className="bg-white dark:bg-slate-800 rounded-xl p-8 text-center border border-slate-200 dark:border-slate-700"
-              >
-                <div className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-2">
-                  {highlight.value}
+            {highlights.map((highlight, idx) => {
+              const Icon = highlight.icon;
+              return (
+                <div
+                  key={idx}
+                  className="bg-white dark:bg-slate-800 rounded-xl p-8 text-center border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group"
+                  style={{
+                    animation: `slideInFromLeft ${0.8 + idx * 0.2}s ease-out forwards`,
+                    animationDelay: `${idx * 0.1}s`,
+                    opacity: 0,
+                  }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/10 dark:to-teal-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative z-10">
+                    <div className="flex justify-center mb-4">
+                      <div className="p-3 bg-emerald-100 dark:bg-emerald-900/30 rounded-full group-hover:bg-emerald-200 dark:group-hover:bg-emerald-900/50 transition-colors">
+                        <Icon className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+                      </div>
+                    </div>
+                    <div className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-2">
+                      {highlight.value}
+                    </div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400 font-medium">
+                      {highlight.label}
+                    </div>
+                  </div>
                 </div>
-                <div className="text-sm text-slate-600 dark:text-slate-400 font-medium">
-                  {highlight.label}
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -187,14 +203,10 @@ const SinglePage: React.FC = () => {
           </div>
           <div className="bg-white dark:bg-slate-800 rounded-xl p-8 border border-slate-200 dark:border-slate-700">
             <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
-              I am a seasoned technology leader with over 15 years of experience driving digital transformation 
-              and operational excellence in the fintech and banking sectors. My expertise lies in building 
-              high-performing teams, implementing robust IT service management frameworks, and delivering 
-              scalable technology solutions that align with business objectives.
+              I am a seasoned technology leader with over 15 years of experience driving digital transformation and operational excellence in the fintech and banking sectors. My expertise lies in building high-performing teams, implementing robust IT service management frameworks, and delivering scalable technology solutions that align with business objectives.
             </p>
             <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
-              Based in Saudi Arabia, I am passionate about leveraging technology to solve complex business 
-              challenges and create value through innovation, strategic planning, and continuous improvement.
+              Based in Saudi Arabia, I am passionate about leveraging technology to solve complex business challenges and create value through innovation, strategic planning, and continuous improvement.
             </p>
           </div>
         </div>
@@ -424,7 +436,7 @@ const SinglePage: React.FC = () => {
                         )}
                         {cert.credentialId && (
                           <p className="text-xs text-slate-500 dark:text-slate-500 mb-2">
-                            ID: {cert.credentialId}
+                            Credential ID: {cert.credentialId}
                           </p>
                         )}
                         {cert.expired && (
@@ -647,4 +659,5 @@ const SinglePage: React.FC = () => {
 };
 
 export default SinglePage;
+
 

@@ -147,3 +147,4 @@ const Training: React.FC = () => {
 
 export default Training;
 
+

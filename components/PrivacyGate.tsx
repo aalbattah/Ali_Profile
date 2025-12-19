@@ -82,3 +82,4 @@ const PrivacyGate: React.FC<PrivacyGateProps> = ({ onAccessGranted }) => {
 
 export default PrivacyGate;
 
+

@@ -29,6 +29,7 @@
       }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Tajawal:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
       // Prevent flash of unstyled content for dark mode
       (function() {
@@ -42,6 +43,16 @@
       body {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         background-color: #ffffff;
+      }
+      .arabic-name {
+        font-family: 'Tajawal', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+        font-weight: 400;
+        color: #64748b;
+        letter-spacing: 0;
+        line-height: 1.6;
+      }
+      .dark .arabic-name {
+        color: #94a3b8;
       }
       .dark body {
         background-color: #0f172a;
@@ -61,6 +72,16 @@
         to {
           opacity: 1;
           transform: translateY(0);
+        }
+      }
+      @keyframes slideInFromLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
         }
       }
       .animate-fade-in {
