@@ -127,7 +127,7 @@ const SinglePage: React.FC = () => {
 
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://linkedin.com/in/alialbattah"
+                  href="https://www.linkedin.com/in/ali-albattah-093b68ab/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white rounded-lg font-medium hover:border-slate-900 dark:hover:border-slate-400 transition-colors flex items-center gap-2"
@@ -638,7 +638,7 @@ const SinglePage: React.FC = () => {
             </a>
 
             <a
-              href="https://linkedin.com/in/alialbattah"
+              href="https://www.linkedin.com/in/ali-albattah-093b68ab/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 px-8 py-4 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white rounded-lg font-medium hover:border-slate-900 dark:hover:border-slate-400 transition-colors"

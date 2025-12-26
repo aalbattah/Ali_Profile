@@ -65,7 +65,7 @@ const Home: React.FC = () => {
                   Download CV
                 </button>
                 <a
-                  href="https://linkedin.com/in/alialbattah"
+                  href="https://www.linkedin.com/in/ali-albattah-093b68ab/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white rounded-lg font-medium hover:border-slate-900 dark:hover:border-slate-400 transition-colors flex items-center gap-2"

@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
 import ExecutiveHeader from './components/ExecutiveHeader';
 import SinglePage from './pages/SinglePage';
+import { trackPageView } from './utils/analytics';
 
 const App: React.FC = () => {
+  useEffect(() => {
+    // Track page view on mount
+    trackPageView(window.location.pathname);
+  }, []);
+
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-colors">
