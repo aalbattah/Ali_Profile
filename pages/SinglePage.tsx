@@ -117,7 +117,7 @@ const SinglePage: React.FC = () => {
                   {arabicName}
                 </p>
                 <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 font-light">
-                  Technology Operations & Infrastructure Leader
+                  Senior Director of Technology Operations
                 </p>
               </div>
 
@@ -203,7 +203,7 @@ const SinglePage: React.FC = () => {
           </div>
           <div className="bg-white dark:bg-slate-800 rounded-xl p-8 border border-slate-200 dark:border-slate-700">
             <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
-              I am a seasoned technology leader with over 15 years of experience driving digital transformation and operational excellence in the fintech and banking sectors. My expertise lies in building high-performing teams, implementing robust IT service management frameworks, and delivering scalable technology solutions that align with business objectives.
+              I am a senior technology leader with over 15 years of experience driving digital transformation and operational excellence in the fintech and banking sectors. My expertise encompasses Technology Assets Management, Service Desk Management, Service Management, Change and Release Management, Network Operation Center (NOC), and Technology Operations Center (TOC). I specialize in building high-performing teams, implementing robust IT service management frameworks, and delivering scalable technology solutions that align with business objectives.
             </p>
             <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
               Based in Saudi Arabia, I am passionate about leveraging technology to solve complex business challenges and create value through innovation, strategic planning, and continuous improvement.

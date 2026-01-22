@@ -4,7 +4,7 @@ export const translations = {
   en: {
     // Hero Section
     name: 'Ali Albattah',
-    subtitle: 'Technology Operations & Infrastructure Leader',
+    subtitle: 'Senior Director of Technology Operations',
     downloadCV: 'Download CV',
     linkedInProfile: 'LinkedIn Profile',
     
@@ -30,7 +30,7 @@ export const translations = {
     aboutText2: 'Based in Saudi Arabia, I am passionate about leveraging technology to solve complex business challenges and create value through innovation, strategic planning, and continuous improvement.',
     
     // Objective (Hero section)
-    objective: 'Experienced technology leader specializing in IT operations, fintech solutions, and digital transformation. Passionate about building high-performing teams and delivering innovative technology solutions that drive business success.',
+    objective: 'Senior technology leader specializing in Technology Assets Management, Service Desk Management, Service Management, Change and Release Management, Network Operation Center (NOC), and Technology Operations Center (TOC). Passionate about building high-performing teams and delivering innovative technology solutions that drive business success.',
     
     // Contact
     contactStatement: 'Open to executive discussions, advisory roles, and strategic collaboration.',

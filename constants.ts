@@ -4,20 +4,38 @@ import { decodeEmail } from './utils/emailObfuscation';
 export const RESUME_DATA: ResumeData = {
   personalInfo: {
     name: "Ali Albattah",
-    title: "Director of Technology Operations",
+    title: "Senior Director of Technology Operations",
     email: "==QZt5CahRHdhJGbhlGbhBUa", // Encoded email (reversed base64)
     phone: "+966502196619",
     location: "Saudi Arabia",
-    objective: "Experienced technology leader specializing in IT operations, fintech solutions, and digital transformation. Passionate about building high-performing teams and delivering innovative technology solutions that drive business success."
+    objective: "Senior technology leader specializing in Technology Assets Management, Service Desk Management, Service Management, Change and Release Management, Network Operation Center (NOC), and Technology Operations Center (TOC). Passionate about building high-performing teams and delivering innovative technology solutions that drive business success."
   },
   experience: [
     {
       company: "Diriyah Company",
+      role: "Senior Director of Technology Operations, IT Department",
+      location: "Saudi Arabia",
+      period: "Jan 2026 – Present",
+      details: [
+        "Lead comprehensive Technology Operations encompassing Technology Assets Management, Service Desk Management, Service Management, Change and Release Management, Network Operation Center (NOC), and Technology Operations Center (TOC).",
+        "Oversee end-to-end IT service management function, ensuring strategic alignment with business goals through effective Service Strategy, Design, Transition, Operation, and Continual Service Improvement (CSI).",
+        "Manage Technology Assets Management lifecycle including procurement, deployment, maintenance, and retirement of IT assets to optimize utilization and reduce costs.",
+        "Direct Service Desk Management operations ensuring timely resolution of incidents, requests, and user support across all technology services.",
+        "Lead Service Management framework implementation and enforcement (ITSM, SLAs, SLOs), ensuring regulatory compliance, service quality, and cost efficiency.",
+        "Oversee Change and Release Management processes to ensure controlled, risk-managed deployment of technology changes while maintaining service stability.",
+        "Manage 24/7 Network Operation Center (NOC) and Technology Operations Center (TOC) operations, ensuring high availability and rapid incident response.",
+        "Spearhead the development and execution of departmental strategy, annual budgets, and operational plans while coaching and managing high-performing technical teams.",
+        "Drive service innovation and infrastructure enhancement through robust change, incident, and problem management practices.",
+        "Ensure continuous improvement of IT services by monitoring performance and leveraging data-driven insights to optimize operations and elevate service delivery standards."
+      ]
+    },
+    {
+      company: "Diriyah Company",
       role: "Director of Technology Operations, IT Department",
       location: "Saudi Arabia",
-      period: "Dec 2024 – Present",
+      period: "Dec 2024 – Jan 2026",
       details: [
-        "Lead the end-to-end IT service management function, ensuring strategic alignment with DGDA's business goals through effective Service Strategy, Design, Transition, Operation, and Continual Service Improvement (CSI).",
+        "Lead the end-to-end IT service management function, ensuring strategic alignment with business goals through effective Service Strategy, Design, Transition, Operation, and Continual Service Improvement (CSI).",
         "Oversee the implementation and enforcement of IT service management frameworks (e.g., ITSM, SLAs, SLOs), ensuring regulatory compliance, service quality, and cost efficiency.",
         "Spearhead the development and execution of departmental strategy, annual budgets, and operational plans while coaching and managing high-performing technical teams.",
         "Drive service innovation and infrastructure enhancement through robust change, incident, and problem management practices.",
@@ -39,7 +57,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       company: "STC BANK",
-      role: "Director of Technology Operations, IT Department",
+      role: "Senior Director of Technology Operations, IT Department",
       location: "Saudi Arabia",
       period: "Aug 2023 – Nov 2024",
       details: [
@@ -286,6 +304,12 @@ export const RESUME_DATA: ResumeData = {
   ],
   skills: [
     "IT Operations Management",
+    "Technology Assets Management",
+    "Service Desk Management",
+    "Service Management",
+    "Change and Release Management",
+    "Network Operation Center (NOC)",
+    "Technology Operations Center (TOC)",
     "IT Service Management (ITSM)",
     "Strategic Planning",
     "Team Leadership & Mentoring",
@@ -295,7 +319,7 @@ export const RESUME_DATA: ResumeData = {
     "Cybersecurity & Compliance",
     "Cloud Infrastructure",
     "DevOps",
-    "Crisis Management (NOC)",
+    "Crisis Management",
     "Vendor Management"
   ],
   languages: [

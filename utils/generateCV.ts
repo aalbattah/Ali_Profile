@@ -66,7 +66,7 @@ export const generateCV = () => {
   doc.setFontSize(10);
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(71, 85, 105);
-  doc.text('Technology Operations & Infrastructure Leader', margin, yPosition);
+  doc.text('Senior Director of Technology Operations', margin, yPosition);
   yPosition += 6;
 
   const { email: encodedEmail, phone, location } = RESUME_DATA.personalInfo;
